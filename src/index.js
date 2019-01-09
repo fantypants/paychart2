@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import Popper from 'popper.js';
+import { App } from './App';
+// import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'bootstrap/dist/css/bootstrap-grid.css';
+import './styles/style.css';
 import * as serviceWorker from './serviceWorker';
 
 

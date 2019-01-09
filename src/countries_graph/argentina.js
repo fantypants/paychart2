@@ -189,7 +189,7 @@ const options= {
  const sngl_bar = value => {
    return 'rgb(68, 114, 196)';
  };
-class Argentina extends React.Component {
+class Argentina extends Component {
     constructor(props) {
         super(props);
         this.play = this.play.bind(this);
