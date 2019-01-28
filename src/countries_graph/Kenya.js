@@ -17,7 +17,7 @@ const data_1 = {
       hoverBackgroundColor: 'rgb(68, 114, 196)',
       hoverBorderColor: 'rgb(68, 114, 196)',
       data: [215, 70.7, 63.8, 94.5],
-      backgroundColor:[ 
+      backgroundColor:[
         "rgb(68, 114, 196)",
         "rgb(68, 114, 196)",
         "rgb(68, 114, 196)",
@@ -33,7 +33,7 @@ const data_1 = {
       hoverBackgroundColor: '#ed7d31',
       hoverBorderColor: '#ed7d31',
       data: [4.8, -3.4, -3.5, 0.9],
-      backgroundColor:[ 
+      backgroundColor:[
         "#ed7d31",
         "#ed7d31",
         "#ed7d31",
@@ -48,8 +48,8 @@ const data_1 = {
       borderWidth: 1,
       hoverBackgroundColor: '#a5a5a5',
       hoverBorderColor: '#a5a5a5',
-      data: [-3.2 -4.4, -2.3, 6.8],
-      backgroundColor:[ 
+      data: [-3.2, -4.4, -2.3, 6.8],
+      backgroundColor:[
         "#a5a5a5",
         "#a5a5a5",
         "#a5a5a5",
@@ -65,7 +65,7 @@ const data_1 = {
       hoverBackgroundColor: '#ffc000',
       hoverBorderColor: '#ffc000',
       data: [4.7, 3.1, 1.3, 2.6],
-      backgroundColor:[ 
+      backgroundColor:[
         "#ffc000",
         "#ffc000",
         "#ffc000",
@@ -81,30 +81,30 @@ const data_1 = {
       hoverBackgroundColor: '#5b9bd5',
       hoverBorderColor: '#5b9bd5',
       data: [2.9, 2.9, 2.5, 3.2],
-      backgroundColor:[ 
+      backgroundColor:[
         "#5b9bd5",
         "#5b9bd5",
         "#5b9bd5",
         "#5b9bd5",
         "#5b9bd5"
       ],
-    } 
+    }
   ]
 };
   const data_2= {
   labels: ['for SMEs using PayPal','for offline PayPal mirror basket','for overall offline exports'],
   datasets: [
     {
-      
+
       backgroundColor: 'rgb(68, 114, 196)',
       borderColor: 'rgb(68, 114, 196)',
       borderWidth: 1,
       hoverBackgroundColor: 'rgb(68, 114, 196)',
       hoverBorderColor: 'rgb(68, 114, 196)',
       data: [67,-4,1]
-     
+
     }
-  ]   
+  ]
 };
 const data_3 = {
 	labels: [
@@ -126,16 +126,16 @@ class Kenya extends React.Component {
         this.play = this.play.bind(this);
         this.pause = this.pause.bind(this);
         this.state = { width: window.innerWidth, }; // responsive mobile
-        
+
       }
-     
+
       play() {
         this.slider.slickPlay();
       }
       pause() {
         this.slider.slickPause();
       }
-     
+
       // responsive mobile Start
       componentWillMount() {
         window.addEventListener('resize', this.handleWindowSizeChange);
@@ -149,24 +149,26 @@ class Kenya extends React.Component {
 
       handleWindowSizeChange = () => {
         this.setState({ width: window.innerWidth });
-      };  
+      };
 
   // responsive mobile end...
     render(){
         const settings = {
-            dots: false,
+            dots: true,
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 5000
+            accessibility:true,
+            autoplay: false,
+            arrrows:true
+            // autoplaySpeed: 5000
           };
           const { width } = this.state; // responsive mobile
 		      const isMobile = width <= 500; // responsive mobile
           if (isMobile) {
             return(
                <div>
-               
+
                       <Slider ref={slider => (this.slider = slider)} {...settings}>
                           <div className="br_sldr_upr">
                             <h2>Change in number of trade partners between 2013 and 2017</h2>
@@ -174,7 +176,7 @@ class Kenya extends React.Component {
                               {/* <h2 style={{textAlign: 'center'}}>Change in number of trade partners between 2013 and 2017</h2> */}
                              <HorizontalBar data={data_2} />
                             </div>
-                          </div> 
+                          </div>
                           <div className="br_sldr_upr">
                             <h2>Growth rate comparison</h2>
                             <div className="bar_graph bar_sldr">
@@ -208,9 +210,9 @@ class Kenya extends React.Component {
                               <Pie data={data_3} />
                             </div>
                           </div>
-                          
+
                       </Slider>
-                      
+
                       <div className="ply_pause_btn" style={{ textAlign: "center" }}>
                         <div className="both_ply_pause">
                           <button className="button" onClick={this.play}>
@@ -222,15 +224,15 @@ class Kenya extends React.Component {
                         </div>
                       </div>
                     </div>
-              
-              
-                          
+
+
+
             );
           }
           else{
             return(
               <div>
-              
+
                      <Slider ref={slider => (this.slider = slider)} {...settings}>
                          <div className="br_sldr_upr">
                            <h2>Change in number of trade partners between 2013 and 2017</h2>
@@ -238,7 +240,7 @@ class Kenya extends React.Component {
                              {/* <h2 style={{textAlign: 'center'}}>Change in number of trade partners between 2013 and 2017</h2> */}
                             <HorizontalBar data={data_2} />
                            </div>
-                         </div> 
+                         </div>
                          <div className="br_sldr_upr">
                            <h2>Growth rate comparison</h2>
                            <div className="bar_graph bar_sldr">
@@ -272,9 +274,9 @@ class Kenya extends React.Component {
                              <Pie data={data_3} />
                            </div>
                          </div>
-                         
+
                      </Slider>
-                     
+
                       <div className="ply_pause_btn" style={{ textAlign: "center" }}>
                        <div className="both_ply_pause">
                          <button className="button" onClick={this.play}>
@@ -289,30 +291,30 @@ class Kenya extends React.Component {
                         <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(0)}>
                           <div className="sldr_dot"></div>
                           <div class="sldr_line"></div>
-                          <div className="year_dot">2013</div>           
+                          <div className="year_dot">2013</div>
                         </a>
                         <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(1)}>
                           <div className="sldr_dot"></div>
                           <div class="sldr_line"></div>
-                          <div className="year_dot">2014</div> 
+                          <div className="year_dot">2014</div>
                         </a>
                         <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(2)}>
                           <div className="sldr_dot"></div>
                           <div class="sldr_line"></div>
-                          <div className="year_dot">2015</div> 
+                          <div className="year_dot">2015</div>
                         </a>
                         <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(3)}>
                           <div className="sldr_dot"></div>
                           <div class="sldr_line sldr_line_last"></div>
-                          <div className="year_dot">2016</div> 
+                          <div className="year_dot">2016</div>
                         </a>
                       </div>
                    </div>
-             
-             
-                         
+
+
+
            );
-          }  
+          }
     }
-} 
+}
 export default Kenya;

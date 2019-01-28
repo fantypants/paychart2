@@ -3,15 +3,15 @@ $(function () {
                 "india_states": {
                     "links": {
                         'IN_BE': {
-                            factor: 0.2
+                            factor: 2
                             , between: ['IN', 'BE']
                             , attrs: {
                                 "stroke-width": 3
                             }
                             , tooltip: {content: "up - Mumbai"}
                         }
-                        
-                             
+
+
                     }
                 },
                 "usa_states": {
@@ -49,7 +49,7 @@ $(function () {
                                 "stroke-width": 4
                             }
                             , tooltip: {content: "Roma - Miami"}
-                        }  
+                        }
                         , 'us_AU': {
                             factor: 0.2
                             , between: ['US', 'AU']
@@ -57,7 +57,7 @@ $(function () {
                                 "stroke-width": 5
                             }
                             , tooltip: {content: "Roma - Miami"}
-                        }  
+                        }
                         , 'us_DE': {
                             factor: 0.2
                             , between: ['US', 'DE']
@@ -65,7 +65,7 @@ $(function () {
                                 "stroke-width": 5
                             }
                             , tooltip: {content: "Roma - Miami"}
-                        }  
+                        }
                         , 'us_GB': {
                             factor: 0.2
                             , between: ['US', 'GB']
@@ -73,7 +73,7 @@ $(function () {
                                 "stroke-width": 5
                             }
                             , tooltip: {content: "Roma - Miami"}
-                        }  
+                        }
                         , 'us_ID': {
                             factor: 0.2
                             , between: ['US', 'ID']
@@ -81,7 +81,7 @@ $(function () {
                                 "stroke-width": 4
                             }
                             , tooltip: {content: "Roma - Miami"}
-                        }  
+                        }
                          , 'us_IE': {
                             factor: 0.2
                             , between: ['US', 'IE']
@@ -89,7 +89,7 @@ $(function () {
                                 "stroke-width": 4
                             }
                             , tooltip: {content: "Roma - Miami"}
-                        }  
+                        }
                          , 'us_NO': {
                             factor: 0.2
                             , between: ['US', 'NO']
@@ -97,7 +97,7 @@ $(function () {
                                 "stroke-width": 4
                             }
                             , tooltip: {content: "Roma - Miami"}
-                        }  
+                        }
                         , 'us_BR': {
                             factor: 0.2
                             , between: ['US', 'BR']
@@ -105,188 +105,188 @@ $(function () {
                                 "stroke-width": 4
                             }
                             , tooltip: {content: "Roma - Miami"}
-                        }  
+                        }
                     }
                 },
                 "belgium_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "bulgaria_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "Czech_republic_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "denmark_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "germany_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "estonia_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "ireland_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "greece_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "great_Britain_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "spain_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "france_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "croatia_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "italy_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "cyprus_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "latvia_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "lithuania_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "luxembourg_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "hungaria_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "malta_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "netherlands_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "austria_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "poland_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
 
                 "portugal_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "romania_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "slovakia_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "slovenia_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "finland_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "sweden_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
                 "canada_states": {
                     "links": {
-                        
-                        
+
+
                     }
                 },
 
 
             };
-    
+
     var data_plot = {
                 "india_states": {
                     "plots": {
@@ -295,14 +295,14 @@ $(function () {
                             longitude: 78.96288,
                             size: 0,
                             text: {content: 'IN'}
-                        }, 
+                        },
                         'BE': {
                             latitude: 50.503887,
                             longitude: 4.469936,
                             size: 0,
                             text: {content: 'BE'}
                         }
-                        
+
                     }
                 },
                 "usa_states": {
@@ -1770,8 +1770,8 @@ $(function () {
                             size: 0,
                             tooltip: {content: "BV"}
                         }
-						
-                        
+
+
                     }
                 },
                 "belgium_states": {
@@ -1781,468 +1781,468 @@ $(function () {
                             longitude: -63.616672,
                             size: 0,
                             text: {content: 'AR'}
-                        }, 
+                        },
                         'BE': {
                             latitude: 50.503887,
                             longitude: 4.469936,
                             size: 0,
                             text: {content: 'BE'}
-                        }, 
+                        },
                         'AT': {
                             latitude: 47.516231,
                             longitude: 14.550072,
                             size: 0,
                             text: {content: 'AT'}
-                        }, 
+                        },
                         'AU': {
                             latitude: -25.274398,
                             longitude: 133.775136,
                             size: 0,
                             text: {content: 'AU'}
-                        }, 
+                        },
                         'CA': {
                             latitude: 56.130366,
                             longitude: -106.346771,
                             size: 0,
                             text: {content: 'CA'}
-                        }, 
+                        },
                         'CH': {
                             latitude: 46.818188,
                             longitude: 8.227512,
                             size: 0,
                             text: {content: 'CH'}
-                        }, 
+                        },
                         'CO': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'CO'}
-                        }, 
+                        },
                         'CZ': {
                             latitude: 49.817492,
                             longitude: 15.472962,
                             size: 0,
                             text: {content: 'CZ'}
-                        }, 
+                        },
                         'DE': {
                             latitude: 51.165691,
                             longitude: 10.451526,
                             size: 0,
                             text: {content: 'DE'}
-                        }, 
+                        },
                         'DK': {
                            latitude: 56.26392,
                             longitude: 9.501785,
                             size: 0,
                             tooltip: {content: "DK"}
-                        }, 
+                        },
                         'ES': {
                             latitude: 40.463667	,
                             longitude: -3.74922,
                             size: 0,
                             tooltip: {content: "ES"}
-                        }, 
+                        },
                         'FI': {
                             latitude: 61.92411,
                             longitude: 25.748151,
                             size: 0,
                             tooltip: {content: "FI"}
-                        }, 
+                        },
                         'FR': {
                             latitude: 46.227638,
                             longitude: 2.213749,
                             size: 0,
                             tooltip: {content: "FR"}
-                        }, 
+                        },
                         'GB': {
                             latitude: 55.378051,
                             longitude: -3.435973,
                             size: 0,
                             text: {content: 'GB'},
                             tooltip: {content: "GB"}
-                        }, 
+                        },
                         'HR': {
                             latitude: 45.1,
                             longitude: 15.2,
                             size: 0,
                             tooltip: {content: "HR"}
-                        }, 
+                        },
                         'ID': {
                             latitude: -0.789275,
                             longitude: 113.921327,
                             size: 0,
                             text: {content: 'ID'},
                             tooltip: {content: "ID"}
-                        }, 
+                        },
                         'IL': {
                             latitude: 31.046051,
                             longitude: 34.851612,
                             size: 0,
                             tooltip: {content: "IL"}
-                        }, 
+                        },
                         'IN': {
                             latitude: 20.593684,
                             longitude: 78.96288,
                             size: 0,
                             tooltip: {content: "IN"}
-                        }, 
+                        },
                         'IS': {
                             latitude: 64.963051,
                             longitude: -19.020835,
                             size: 0,
                             tooltip: {content: "IS"}
-                        }, 
+                        },
                         'IT': {
                             latitude: 41.87194,
                             longitude: 12.56738,
                             size: 0,
                             tooltip: {content: "IT"}
-                        }, 
+                        },
                         'JP': {
                             latitude: 36.204824,
                             longitude: 138.252924,
                             size: 0,
                             tooltip: {content: "JP"}
-                        }, 
+                        },
                         'LU': {
                             latitude: 49.815273,
                             longitude: 6.129583,
                             size: 0,
                             tooltip: {content: "LU"}
-                        }, 
+                        },
                         'NL': {
                             latitude: 52.132633,
                             longitude: 5.291266,
                             size: 0,
                             tooltip: {content: "NL"}
-                        }, 
+                        },
                         'NO': {
                             latitude: 60.472024,
                             longitude: 8.468946,
                             size: 0,
                             text: {content: 'NO'},
                             tooltip: {content: "NO"}
-                        }, 
+                        },
                         'NZ': {
                             latitude: -40.900557,
                             longitude: 174.885971,
                             size: 0,
                             tooltip: {content: "NZ"}
-                        }, 
+                        },
                         'PL': {
                             latitude: 51.919438,
                             longitude: 19.145136,
                             size: 0,
                             tooltip: {content: "PL"}
-                        }, 
+                        },
                         'SE': {
                             latitude: 60.128161,
                             longitude: 18.643501,
                             size: 0,
                             tooltip: {content: "SE"}
-                        }, 
+                        },
                         'SI': {
                             latitude: 46.151241,
                             longitude: 14.995463,
                             size: 0,
                             tooltip: {content: "SI"}
-                        }, 
+                        },
                         'TW': {
                             latitude: 23.69781,
                             longitude: 120.960515,
                             size: 0,
                             tooltip: {content: "TW"}
-                        }, 
+                        },
                         'US': {
                             latitude: 36.778259,
                             longitude: -119.417931,
                             size: 0,
                             text: {content: 'USA'}
-                        }, 
+                        },
                         'ZA': {
                             latitude: -30.559482,
                             longitude: 22.937506,
                             size: 0,
                             tooltip: {content: "ZA"}
-                        }, 
+                        },
                         'AE': {
                             latitude: 23.424076,
                             longitude: 53.847818,
                             size: 0,
                             tooltip: {content: "AE"}
-                        }, 
+                        },
                         'GR': {
                             latitude: 39.074208,
                             longitude: 21.824312,
                             size: 0,
                             tooltip: {content: "GR"}
-                        }, 
+                        },
                         'KZ': {
                             latitude: 48.019573,
                             longitude: 66.923684,
                             size: 0,
                             tooltip: {content: "KZ"}
-                        }, 
+                        },
                         'LK': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'LK'}
-                        }, 
+                        },
                         'LT': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'LT'}
-                        }, 
+                        },
                         'LV': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'LV'}
-                        }, 
+                        },
                         'MX': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'MX'}
-                        }, 
+                        },
                         'MY': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'MY'}
-                        }, 
+                        },
                         'AZ': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'AZ'}
-                        }, 
+                        },
                         'BG': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'BG'}
-                        }, 
+                        },
                         'CL': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'CL'}
-                        }, 
+                        },
                         'CV': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'CV'}
-                        }, 
+                        },
                         'CO': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'CO'}
-                        },  
+                        },
                         'GF': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'GF'}
-                        }, 
+                        },
                         'GP': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'GP'}
-                        }, 
+                        },
                         'HU': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'HU'}
-                        }, 
+                        },
                         'IE': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'IE'}
-                        }, 
+                        },
                         'MT': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'MT'}
-                        }, 
+                        },
                         'PF': {
                             latitude: 4.570868,
                             longitude: -74.297333,
                             size: 0,
                             text: {content: 'CO'}
                         }
-                        
+
                     }
                 },
                 "bulgaria_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "Czech_republic_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "denmark_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "germany_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "estonia_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "ireland_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "greece_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "great_Britain_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "spain_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "france_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "croatia_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "italy_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "cyprus_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "latvia_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "lithuania_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "luxembourg_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "hungaria_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "malta_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "netherlands_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "austria_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "poland_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
 
                 "portugal_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "romania_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "slovakia_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "slovenia_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "finland_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "sweden_states": {
                     "plots": {
-                        
-                        
+
+
                     }
                 },
                 "canada_states": {
@@ -2745,7 +2745,7 @@ $(function () {
                             size: 0,
                             text: {content: 'TZ'}
                         },
-						
+
 						'EG': {
                             latitude: 26.820553,
                             longitude: 30.802498,
@@ -3213,12 +3213,12 @@ $(function () {
                             longitude: 12.457777,
                             size: 0,
                             tooltip: {content: "SM"}
-                        } 
-                        
+                        }
+
                     }
                 }
             };
-        
+
     $cntry_cde =  "world_countries";
     $cntry_val = 5000;
     $country= "usa_states";
@@ -3235,9 +3235,9 @@ $(function () {
         $strk_val=4;
     }
 
-    $.fn.myFunction = function(){ 
+    $.fn.myFunction = function(){
         $(".mapcontainer").mapael({
-            
+
             map: {
                 name: $cntry_cde,
                 defaultArea: {
@@ -3278,16 +3278,14 @@ $(function () {
             'deletePlotKeys':"all",
             'newPlots':data_plot[$cntry_cde]['plots'],
             'deleteLinkKeys':"all",
-            'newLinks': 
+            'newLinks':
                     data_link[$cntry_cde]['links']
-                
+
             };
-         $(".mapcontainer").trigger('update',[ 
+         $(".mapcontainer").trigger('update',[
              opt]);
     });
     $.fn.myFunction();
 
 
 });
-
- 

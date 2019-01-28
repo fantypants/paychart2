@@ -36,49 +36,51 @@ const data = [{
 class Graph_slider extends React.Component {
     constructor(props) {
         super(props);
-  
+
          this.state = {
             div: this.props.div
-         
+
         }
       }
      componentWillReceiveProps(nextProps) {
         if(nextProps.div !== 0){
             this.setState({div: nextProps.div});
-            
+
         }
     }
 
     componentDidUpdate(prevProps, prevState) {
         const {div} = this.state;
         if(div !== prevState.div){
-            
+
         }
 
     }
-      
-      
+
+
     render(){
         const settings = {
             dots: true,
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 1000
+            arrows:true,
+            accessibility:true,
+            autoplay: false
+            // autoplaySpeed: 1000
           };
             return(
                 <div>
                   <div className="App">
-                   
-               
+
+
                       {this.state.div}
-                      
-                      
+
+
                   </div>
                 </div>
             );
-            
+
     }
-} 
+}
 export default Graph_slider;

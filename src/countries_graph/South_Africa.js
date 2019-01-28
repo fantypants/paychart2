@@ -16,7 +16,7 @@ const data_1 = {
       hoverBackgroundColor: 'rgb(68, 114, 196)',
       hoverBorderColor: 'rgb(68, 114, 196)',
       data: [127.1, 60.4, 27.9, 28.6],
-      backgroundColor:[ 
+      backgroundColor:[
         "rgb(68, 114, 196)",
         "rgb(68, 114, 196)",
         "rgb(68, 114, 196)",
@@ -32,7 +32,7 @@ const data_1 = {
       hoverBackgroundColor: '#ed7d31',
       hoverBorderColor: '#ed7d31',
       data: [-2.6, -13.3, -7.7, 19.1],
-      backgroundColor:[ 
+      backgroundColor:[
         "#ed7d31",
         "#ed7d31",
         "#ed7d31",
@@ -48,7 +48,7 @@ const data_1 = {
       hoverBackgroundColor: '#a5a5a5',
       hoverBorderColor: '#a5a5a5',
       data: [2.4, -7.2, -4.5, 9.2],
-      backgroundColor:[ 
+      backgroundColor:[
         "#a5a5a5",
         "#a5a5a5",
         "#a5a5a5",
@@ -64,7 +64,7 @@ const data_1 = {
       hoverBackgroundColor: '#ffc000',
       hoverBorderColor: '#ffc000',
       data: [4.7, 3.1, 1.3, 2.6],
-      backgroundColor:[ 
+      backgroundColor:[
         "#ffc000",
         "#ffc000",
         "#ffc000",
@@ -80,30 +80,30 @@ const data_1 = {
       hoverBackgroundColor: '#5b9bd5',
       hoverBorderColor: '#5b9bd5',
       data: [2.9, 2.9, 2.5, 3.2],
-      backgroundColor:[ 
+      backgroundColor:[
         "#5b9bd5",
         "#5b9bd5",
         "#5b9bd5",
         "#5b9bd5",
         "#5b9bd5"
       ],
-    } 
+    }
   ]
 };
   const data_2= {
   labels: ['for SMEs using PayPal','for offline PayPal mirror basket','for overall offline exports'],
   datasets: [
     {
-      
+
       backgroundColor: 'rgb(68, 114, 196)',
       borderColor: 'rgb(68, 114, 196)',
       borderWidth: 1,
       hoverBackgroundColor: 'rgb(68, 114, 196)',
       hoverBorderColor: 'rgb(68, 114, 196)',
       data: [41,9,6]
-     
+
     }
-  ]   
+  ]
 };
 const data_3 = {
 	labels: [
@@ -125,16 +125,16 @@ class South_Africa extends React.Component {
         this.play = this.play.bind(this);
         this.pause = this.pause.bind(this);
         this.state = { width: window.innerWidth, }; // responsive mobile
-        
+
       }
-     
+
       play() {
         this.slider.slickPlay();
       }
       pause() {
         this.slider.slickPause();
       }
-     
+
     // responsive mobile Start
     componentWillMount() {
       window.addEventListener('resize', this.handleWindowSizeChange);
@@ -148,24 +148,26 @@ class South_Africa extends React.Component {
 
     handleWindowSizeChange = () => {
       this.setState({ width: window.innerWidth });
-    };  
+    };
 
-// responsive mobile end...  
+// responsive mobile end...
     render(){
         const settings = {
-            dots: false,
+            dots: true,
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 5000
+            accessibility:true,
+            autoplay: false,
+            arrrows:true
+            // autoplaySpeed: 5000
           };
           const { width } = this.state; // responsive mobile
 		      const isMobile = width <= 500; // responsive mobile
           if (isMobile) {
             return(
                 <div>
-               
+
                       <Slider ref={slider => (this.slider = slider)} {...settings}>
                           <div className="br_sldr_upr">
                             <div className="bar_graph bar_sldr">
@@ -206,7 +208,7 @@ class South_Africa extends React.Component {
                             </div>
                           </div>
                       </Slider>
-                      
+
                       <div className="ply_pause_btn" style={{ textAlign: "center" }}>
                         <div className="both_ply_pause">
                           <button className="button" onClick={this.play}>
@@ -218,17 +220,17 @@ class South_Africa extends React.Component {
                         </div>
                       </div>
                     </div>
-              
-              
-              
-                          
+
+
+
+
             );
           }
-        
+
         else{
           return(
             <div>
-           
+
                   <Slider ref={slider => (this.slider = slider)} {...settings}>
                       <div className="br_sldr_upr">
                         <div className="bar_graph bar_sldr">
@@ -269,7 +271,7 @@ class South_Africa extends React.Component {
                         </div>
                       </div>
                   </Slider>
-                  
+
                   <div className="ply_pause_btn" style={{ textAlign: "center" }}>
                     <div className="both_ply_pause">
                       <button className="button" onClick={this.play}>
@@ -284,31 +286,31 @@ class South_Africa extends React.Component {
                         <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(0)}>
                           <div className="sldr_dot"></div>
                           <div class="sldr_line"></div>
-                          <div className="year_dot">2013</div>           
+                          <div className="year_dot">2013</div>
                         </a>
                         <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(1)}>
                           <div className="sldr_dot"></div>
                           <div class="sldr_line"></div>
-                          <div className="year_dot">2014</div> 
+                          <div className="year_dot">2014</div>
                         </a>
                         <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(2)}>
                           <div className="sldr_dot"></div>
                           <div class="sldr_line"></div>
-                          <div className="year_dot">2015</div> 
+                          <div className="year_dot">2015</div>
                         </a>
                         <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(3)}>
                           <div className="sldr_dot"></div>
                           <div class="sldr_line sldr_line_last"></div>
-                          <div className="year_dot">2016</div> 
+                          <div className="year_dot">2016</div>
                         </a>
                       </div>
                 </div>
-          
-          
-          
-                      
+
+
+
+
         );
-        }  
+        }
     }
-} 
+}
 export default South_Africa;

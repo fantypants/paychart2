@@ -8,7 +8,7 @@ import South_Africa from'../../countries_graph/South_Africa';
 import Vietnam from'../../countries_graph/Vietnam';
 import { Footer, Header } from '../common';
 import Slider from "react-slick";
-  
+
 class Home extends Component {
 	constructor(props) {
         super(props);
@@ -27,12 +27,12 @@ class Home extends Component {
 	if(event.target.value === "Argentina")
 	{
 		this.setState({ div: <Argentina />});
-	   
-	  
+
+
 	}
 	else if(event.target.value === "Colombia")
 	{
-		    
+
 		this.setState({ div: <Colombia /> });
 	}
 	else if(event.target.value === "India")
@@ -47,23 +47,25 @@ class Home extends Component {
 	{
          this.setState({ div: <South_Africa /> });
 	}
-	else 
+	else
 	{
         this.setState({ div: <Vietnam /> });
-	}	
-  }; 
-	
-  		render(){ 
+	}
+  };
+
+  		render(){
 			const settings = {
-				dots: false,
+				dots: true,
 				infinite: true,
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				autoplay: true,
-				autoplaySpeed: 5000
+        accessibility:true,
+        autoplay: false,
+        arrrows:true
+				// autoplaySpeed: 5000
 			};
 			  	return(
-                <div className="page-sec"> 
+                <div className="page-sec">
                             <Header />
 			            	<div className="content-section">
 								<section id="first_sec" className="sec_first">
@@ -77,7 +79,7 @@ class Home extends Component {
 											<div class="blue-border"></div>
 											<div className="col-sm-12 button_sec">
 												<div className="papal_buttn"><a href="">Download the full report</a></div>
-											</div>	
+											</div>
 											<div className="col-sm-12 scroll_cntnu">
 												<div className="scroll_text">Scroll to continue</div>
 												<div className="swipe_text">Swipe to continue</div>
@@ -86,7 +88,7 @@ class Home extends Component {
 											</div>
 										</div>
 									</div>
-								</section>	
+								</section>
 								<section id="second_sec" className="sec_second">
 									<div className="container-fluid select-fluid">
 										<div className="row">
@@ -118,8 +120,8 @@ class Home extends Component {
 													</div>
 													<div class="single_line"></div>
 													<div className="lorem-text">
-														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p> 
-														<p>Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p> 
+														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
+														<p>Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
 													</div>
 												</div>
 											</div>
@@ -130,10 +132,10 @@ class Home extends Component {
 											<div class="mobile_bar"><img src={require('./image/mobil_bar.png')} /></div>  */}
 										</div>
 									</div>
-									<div className="container-fluid carousel-fluid">
-										<div className="row carousel-row">
+									<div className="container-fluid carousel-fluid" data-interval="false" >
+										<div className="row carousel-row" data-interval="false" >
 											<div className="col-sm-12">
-												<div className="carousel_custom1">
+												<div className="carousel_custom1" data-interval="false" >
 													{/* <img src={require('./image/carousel_btn.png')} /> */}
 													<span className="merchant">In 2016, merchants on Paypal in Argentina grew by X%, greater than 8x over [other index]</span>
 												</div>
@@ -167,8 +169,8 @@ class Home extends Component {
 													</div>
 													<div className="single_line mobile_line"></div>
 													<div className="lorem-text">
-														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p> 
-														<p>Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p> 
+														<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
+														<p>Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
 													</div>
 												</div>
 												<div class="map_notification">
@@ -263,27 +265,27 @@ class Home extends Component {
 															<a className="button frst_sld"  onClick={e => this.slider.slickGoTo(0)}>
 															<div className="sldr_dot"></div>
 															<div class="sldr_line_map"></div>
-															<div className="year_dot_map">2013</div>           
+															<div className="year_dot_map">2013</div>
 															</a>
 															<a className="button frst_sld"  onClick={e => this.slider.slickGoTo(1)}>
 															<div className="sldr_dot"></div>
 															<div class="sldr_line_map"></div>
-															<div className="year_dot_map">2014</div> 
+															<div className="year_dot_map">2014</div>
 															</a>
 															<a className="button frst_sld"  onClick={e => this.slider.slickGoTo(2)}>
 															<div className="sldr_dot"></div>
 															<div class="sldr_line_map"></div>
-															<div className="year_dot_map">2015</div> 
+															<div className="year_dot_map">2015</div>
 															</a>
 															<a className="button frst_sld"  onClick={e => this.slider.slickGoTo(3)}>
 															<div className="sldr_dot"></div>
 															<div class="sldr_line_map"></div>
-															<div className="year_dot_map">2016</div> 
+															<div className="year_dot_map">2016</div>
 															</a>
 															<a className="button frst_sld"  onClick={e => this.slider.slickGoTo(4)}>
 															<div className="sldr_dot"></div>
 															<div class="sldr_line_map sldr_line_last"></div>
-															<div className="year_dot_map">2017</div> 
+															<div className="year_dot_map">2017</div>
 															</a>
 														</div>
 													</div>

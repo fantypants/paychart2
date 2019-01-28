@@ -5,7 +5,7 @@ import {BarChart} from 'react-d3-components';
 import Slider from "react-slick";
 import * as d3 from "d3";
 import {HorizontalBar,Pie, Bar} from 'react-chartjs-2';
- 
+
 //var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 const data = {
@@ -33,7 +33,7 @@ const data_1 = {
       hoverBackgroundColor: 'rgb(68, 114, 196)',
       hoverBorderColor: 'rgb(68, 114, 196)',
       data: [75.8, 19.2, 101.2, 47.4],
-      backgroundColor:[ 
+      backgroundColor:[
         "rgb(68, 114, 196)",
         "rgb(68, 114, 196)",
         "rgb(68, 114, 196)",
@@ -49,7 +49,7 @@ const data_1 = {
       hoverBackgroundColor: '#ed7d31',
       hoverBorderColor: '#ed7d31',
       data: [-6.8, -34.9, -13, 21.7],
-      backgroundColor:[ 
+      backgroundColor:[
         "#ed7d31",
         "#ed7d31",
         "#ed7d31",
@@ -65,7 +65,7 @@ const data_1 = {
       hoverBackgroundColor: '#a5a5a5',
       hoverBorderColor: '#a5a5a5',
       data: [3.1, -3.6, -1.7, 7.2],
-      backgroundColor:[ 
+      backgroundColor:[
         "#a5a5a5",
         "#a5a5a5",
         "#a5a5a5",
@@ -81,7 +81,7 @@ const data_1 = {
       hoverBackgroundColor: '#ffc000',
       hoverBorderColor: '#ffc000',
       data: [1, 0, -0.5, 1.7],
-      backgroundColor:[ 
+      backgroundColor:[
         "#ffc000",
         "#ffc000",
         "#ffc000",
@@ -97,17 +97,17 @@ const data_1 = {
       hoverBackgroundColor: '#5b9bd5',
       hoverBorderColor: '#5b9bd5',
       data: [2.9, 2.9, 2.5, 3.2],
-      backgroundColor:[ 
+      backgroundColor:[
         "#5b9bd5",
         "#5b9bd5",
         "#5b9bd5",
         "#5b9bd5",
         "#5b9bd5"
       ],
-    } 
+    }
   ]
 };
-  
+
 const data_3 = {
 	labels: [
     'inclumbent small business using PayPal',
@@ -119,9 +119,9 @@ const data_3 = {
       '#4472c4',
 	   	'#ed7d31'
     ],
-    
+
   }]
- 
+
 };
 const options ={
   events: false,
@@ -130,7 +130,7 @@ const options ={
    easing: "easeOutQuart",
    onComplete: function () {
    var ctx = this.chart.ctx;
-  
+
    ctx.textAlign = 'center';
    ctx.textBaseline = 'bottom';
 
@@ -152,15 +152,15 @@ const options ={
         ctx.fillStyle = '#444';
       }
       var percent = String(Math.round(dataset.data[i]/total*100)) + "%";
-      
+
       // Display percent in another line, line break doesn't work for fillText
       ctx.fillText(percent, model.x + x, model.y + y + 15);
     }
-   });               
+   });
    }
    }
-  
-	
+
+
 }
 const sngl_bar = value => {
   return 'rgb(68, 114, 196)';
@@ -171,16 +171,16 @@ class Colombia extends React.Component {
         this.play = this.play.bind(this);
         this.pause = this.pause.bind(this);
         this.state = { width: window.innerWidth, }; // responsive mobile
-        
+
       }
-     
+
       play() {
         this.slider.slickPlay();
       }
       pause() {
         this.slider.slickPause();
       }
-     
+
     // responsive mobile Start
     componentWillMount() {
       window.addEventListener('resize', this.handleWindowSizeChange);
@@ -194,24 +194,26 @@ class Colombia extends React.Component {
 
     handleWindowSizeChange = () => {
       this.setState({ width: window.innerWidth });
-    };  
+    };
 
-// responsive mobile end...      
+// responsive mobile end...
     render(){
         const settings = {
-            dots: false,
+            dots: true,
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 5000
+            accessability:true,
+            autoplay: false,
+            arrows:true
+            // autoplaySpeed: 5000
           };
         const { width } = this.state; // responsive mobile
         const isMobile = width <= 500; // responsive mobile
         if (isMobile) {
             return(
                <div>
-               
+
                       <Slider ref={slider => (this.slider = slider)} {...settings}>
                        <div className="br_sldr_upr">
                             <div className="bar_graph bar_sldr">
@@ -292,7 +294,7 @@ class Colombia extends React.Component {
                             </div>
                           </div>
                       </Slider>
-                      
+
                       <div className="ply_pause_btn" style={{ textAlign: "center" }}>
                         <div className="both_ply_pause">
                           <button className="button" onClick={this.play}>
@@ -304,15 +306,15 @@ class Colombia extends React.Component {
                         </div>
                       </div>
                     </div>
-              
-              
-                          
+
+
+
             );
-          } 
+          }
           else{
             return(
               <div>
-              
+
                      <Slider ref={slider => (this.slider = slider)} {...settings}>
                       <div className="br_sldr_upr">
                            <div className="bar_graph bar_sldr">
@@ -393,7 +395,7 @@ class Colombia extends React.Component {
                            </div>
                          </div>
                      </Slider>
-                     
+
                      <div className="ply_pause_btn" style={{ textAlign: "center" }}>
                        <div className="both_ply_pause">
                          <button className="button" onClick={this.play}>
@@ -408,29 +410,29 @@ class Colombia extends React.Component {
                         <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(0)}>
                           <div className="sldr_dot"></div>
                           <div class="sldr_line"></div>
-                          <div className="year_dot">2013</div>           
+                          <div className="year_dot">2013</div>
                         </a>
                         <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(1)}>
                           <div className="sldr_dot"></div>
                           <div class="sldr_line"></div>
-                          <div className="year_dot">2014</div> 
+                          <div className="year_dot">2014</div>
                         </a>
                         <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(2)}>
                           <div className="sldr_dot"></div>
                           <div class="sldr_line"></div>
-                          <div className="year_dot">2015</div> 
+                          <div className="year_dot">2015</div>
                         </a>
                         <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(3)}>
                           <div className="sldr_dot"></div>
                           <div class="sldr_line sldr_line_last"></div>
-                          <div className="year_dot">2016</div> 
+                          <div className="year_dot">2016</div>
                         </a>
                       </div>
                    </div>
-                  
+
            );
 
-          } 
+          }
     }
-} 
+}
 export default Colombia;
