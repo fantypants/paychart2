@@ -4,13 +4,77 @@ import {BarChart} from 'react-d3-components';
 import {LineChart } from 'react-d3-components';
 import Slider from "react-slick";
 import * as d3 from "d3";
-import {HorizontalBar,Pie, Bar} from 'react-chartjs-2';
+import {Bar} from 'react-chartjs-2';
 //var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 const data_1 = {
   labels: ['2013-2014', '2014-2015', '2015-2016','2016-2017'],
   datasets: [
     {
-      label: 'somethingA',
+      label: 'Growth Rate of Total Offline Exports',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
+      borderWidth: 1,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      data: [13.8, 7.9, 9, 21.2],
+      backgroundColor:[
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8"
+      ],
+    },
+    {
+      label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
+      backgroundColor: '#A9A9A9',
+      borderColor: '#A9A9A9',
+      borderWidth: 1,
+      hoverBackgroundColor: '#A9A9A9',
+      hoverBorderColor: '#A9A9A9',
+      data: [18.9, 13.8, 14.9, 12.2],
+      backgroundColor:[
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9"
+      ],
+    },
+    {
+      label: 'GDP Growth Rate (Latin America & Caribbean)',
+      backgroundColor: '#BEBEBE',
+      borderColor: '#BEBEBE',
+      borderWidth: 1,
+      hoverBackgroundColor: '#BEBEBE',
+      hoverBorderColor: '#BEBEBE',
+      data: [6.8, 6.5, 6.3, 6.6],
+      backgroundColor:[
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE"
+      ],
+    },
+    {
+      label: 'GDP Growth Rate (World)',
+      backgroundColor: '#DCDCDC',
+      borderColor: '#DCDCDC',
+      borderWidth: 1,
+      hoverBackgroundColor: '#DCDCDC',
+      hoverBorderColor: '#DCDCDC',
+      data: [2.9, 2.9, 2.5, 3.2],
+      backgroundColor:[
+        "#DCDCDC",
+        "#DCDCDC",
+        "#DCDCDC",
+        "#DCDCDC",
+        "#DCDCDC"
+      ],
+    },
+    {
+      label: 'Growth Rate of SMEs Using PayPal',
       backgroundColor: 'rgb(68, 114, 196)',
       borderColor: 'rgb(68, 114, 196)',
       borderWidth: 1,
@@ -25,99 +89,7 @@ const data_1 = {
         "rgb(68, 114, 196)"
       ],
     },
-    {
-      label: 'somethingB',
-      backgroundColor: '#ed7d31',
-      borderColor: '#ed7d31',
-      borderWidth: 1,
-      hoverBackgroundColor: '#ed7d31',
-      hoverBorderColor: '#ed7d31',
-      data: [13.8, 7.9, 9, 21.2],
-      backgroundColor:[
-        "#ed7d31",
-        "#ed7d31",
-        "#ed7d31",
-        "#ed7d31",
-        "#ed7d31"
-      ],
-    },
-    {
-      label: 'somethingC',
-      backgroundColor: '#a5a5a5',
-      borderColor: '#a5a5a5',
-      borderWidth: 1,
-      hoverBackgroundColor: '#a5a5a5',
-      hoverBorderColor: '#a5a5a5',
-      data: [18.9, 13.8, 14.9, 12.2],
-      backgroundColor:[
-        "#a5a5a5",
-        "#a5a5a5",
-        "#a5a5a5",
-        "#a5a5a5",
-        "#a5a5a5"
-      ],
-    },
-    {
-      label: 'somethingD',
-      backgroundColor: '#ffc000',
-      borderColor: '#ffc000',
-      borderWidth: 1,
-      hoverBackgroundColor: '#ffc000',
-      hoverBorderColor: '#ffc000',
-      data: [6.8, 6.5, 6.3, 6.6],
-      backgroundColor:[
-        "#ffc000",
-        "#ffc000",
-        "#ffc000",
-        "#ffc000",
-        "#ffc000"
-      ],
-    },
-    {
-      label: 'somethingD',
-      backgroundColor: '#5b9bd5',
-      borderColor: '#5b9bd5',
-      borderWidth: 1,
-      hoverBackgroundColor: '#5b9bd5',
-      hoverBorderColor: '#5b9bd5',
-      data: [2.9, 2.9, 2.5, 3.2],
-      backgroundColor:[
-        "#5b9bd5",
-        "#5b9bd5",
-        "#5b9bd5",
-        "#5b9bd5",
-        "#5b9bd5"
-      ],
-    }
   ]
-};
- const data_2= {
-  labels: ['for SMEs using PayPal','for offline PayPal mirror basket','for overall offline exports'],
-  datasets: [
-    {
-
-      backgroundColor: 'rgb(68, 114, 196)',
-      borderColor: 'rgb(68, 114, 196)',
-      borderWidth: 1,
-      hoverBackgroundColor: 'rgb(68, 114, 196)',
-      hoverBorderColor: 'rgb(68, 114, 196)',
-      data: [37,-3,-3]
-
-    }
-  ]
-};
-const data_3 = {
-	labels: [
-    'inclumbent small business using PayPal',
-		'new entrants using PayPal'
-	],
-	datasets: [{
-		data: [46, 54],
-		backgroundColor: [
-      '#4472c4',
-	   	'#ed7d31'
-		]
-	}]
 };
 
 class Vietnam extends React.Component {
@@ -169,14 +141,7 @@ class Vietnam extends React.Component {
           if (isMobile) {
             return(
                <div>
-
                       <Slider ref={slider => (this.slider = slider)} {...settings}>
-                          <div className="br_sldr_upr">
-                            <div className="bar_graph bar_sldr">
-                              <h2 style={{textAlign: 'center'}}>Change in number of trade partners between 2013 and 2017<span style={{'font-size': '15px'}}>(*offline overall and PayPal mirror basket comparison between 2013 and 2016) </span></h2>
-                             <HorizontalBar data={data_2} />
-                            </div>
-                          </div>
                           <div className="br_sldr_upr">
                             <div className="bar_graph bar_sldr">
                               <h2 style={{textAlign: 'center'}}>Growth rate comparison</h2>
@@ -203,15 +168,7 @@ class Vietnam extends React.Component {
                             />
                             </div>
                           </div>
-                          <div className="br_sldr_upr">
-                            <h2>contribution to growth in export volume using PayPal (2013-2017)</h2>
-                            <div className="bar_graph bar_sldr">
-                              <Pie data={data_3} />
-                            </div>
-                          </div>
-
                       </Slider>
-
                       <div className="ply_pause_btn" style={{ textAlign: "center" }}>
                         <div className="both_ply_pause">
                           <button className="button" onClick={this.play}>
@@ -223,9 +180,6 @@ class Vietnam extends React.Component {
                         </div>
                       </div>
                     </div>
-
-
-
             );
           }
           else{
@@ -233,12 +187,6 @@ class Vietnam extends React.Component {
               <div>
 
                      <Slider ref={slider => (this.slider = slider)} {...settings}>
-                         <div className="br_sldr_upr">
-                           <div className="bar_graph bar_sldr">
-                             <h2 style={{textAlign: 'center'}}>Change in number of trade partners between 2013 and 2017<span style={{'font-size': '15px'}}>(*offline overall and PayPal mirror basket comparison between 2013 and 2016) </span></h2>
-                            <HorizontalBar data={data_2} />
-                           </div>
-                         </div>
                          <div className="br_sldr_upr">
                            <div className="bar_graph bar_sldr">
                              <h2 style={{textAlign: 'center'}}>Growth rate comparison</h2>
@@ -265,13 +213,6 @@ class Vietnam extends React.Component {
                             />
                            </div>
                          </div>
-                         <div className="br_sldr_upr">
-                           <h2>contribution to growth in export volume using PayPal (2013-2017)</h2>
-                           <div className="bar_graph bar_sldr">
-                             <Pie data={data_3} />
-                           </div>
-                         </div>
-
                      </Slider>
 
                      <div className="ply_pause_btn" style={{ textAlign: "center" }}>
@@ -307,9 +248,6 @@ class Vietnam extends React.Component {
                         </a>
                       </div>
                    </div>
-
-
-
            );
           }
     }

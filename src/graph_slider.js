@@ -57,7 +57,6 @@ class Graph_slider extends React.Component {
 
     }
 
-
     render(){
         const settings = {
             dots: true,

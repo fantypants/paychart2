@@ -10,8 +10,6 @@ $(function () {
                             }
                             , tooltip: {content: "up - Mumbai"}
                         }
-
-
                     }
                 },
                 "usa_states": {
@@ -110,8 +108,14 @@ $(function () {
                 },
                 "belgium_states": {
                     "links": {
-
-
+                      'BE_AR': {
+                          factor: 0.2
+                          , between: ['BE', 'AR']
+                          , attrs: {
+                              "stroke-width": 4
+                          }
+                          , tooltip: {content: "Brussels - Buenos Aires"}
+                      }
                     }
                 },
                 "bulgaria_states": {

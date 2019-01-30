@@ -9,12 +9,151 @@ const data_1 = {
   labels: ['2013-2014', '2014-2015', '2015-2016','2016-2017'],
   datasets: [
     {
-      label: 'Growth rate of SMEs using PayPal',
+      label: 'Growth Rate of Total Offline Exports',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
+      borderWidth: 0,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      // data: [-9.9, 17, 1.7, 1.1],
+      data: [10],
+      backgroundColor:[
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+      ],
+    },
+    {
+      label: 'Growth Rate of Total Offline Exports',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
+      borderWidth: 0,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      // data: [-9.9, 17, 1.7, 1.1],
+      data: [10],
+      backgroundColor:[
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+      ],
+    },
+    {
+      label: 'Growth Rate of Total Offline Exports',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
+      borderWidth: 0,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      // data: [-9.9, 17, 1.7, 1.1],
+      data: [10],
+      backgroundColor:[
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+      ],
+    },
+    {
+      label: 'Growth Rate of Total Offline Exports',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
+      borderWidth: 0,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      // data: [-9.9, 17, 1.7, 1.1],
+      data: [10],
+      backgroundColor:[
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+      ],
+    },
+  ]
+}
+
+const data_2 = {
+  labels: ['2013-2014', '2014-2015', '2015-2016','2016-2017'],
+  datasets: [
+    {
+      label: 'Growth Rate of Total Offline Exports',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
+      borderWidth: 1,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      // data: [-9.9, 17, 1.7, 1.1],
+      data: [-9.9],
+      backgroundColor:[
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8"
+      ],
+    },
+    {
+      label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
+      backgroundColor: '#A9A9A9',
+      borderColor: '#A9A9A9',
+      borderWidth: 1,
+      hoverBackgroundColor: '#A9A9A9',
+      hoverBorderColor: '#A9A9A9',
+      // data: [-9.1, -7.4, -5.6, 3.5],
+      data: [-9.1, -7.4, -5.6, 3.5],
+      backgroundColor:[
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9"
+      ],
+    },
+    {
+      label: 'GDP Growth Rate (Latin America & Caribbean)',
+      backgroundColor: '#BEBEBE',
+      borderColor: '#BEBEBE',
+      borderWidth: 1,
+      hoverBackgroundColor: '#BEBEBE',
+      hoverBorderColor: '#BEBEBE',
+      // data: [1, 0, -0.5, 1.7],
+      data: [1, 0, -0.5, 1.7],
+      backgroundColor:[
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE"
+      ],
+    },
+    {
+      label: 'GDP Growth Rate (world)',
+      backgroundColor: '#DCDCDC',
+      borderColor: '#DCDCDC',
+      borderWidth: 1,
+      hoverBackgroundColor: '#DCDCDC',
+      hoverBorderColor: '#DCDCDC',
+      // data: [2.9, 2.9, 2.5, 3.2],
+      data: [2.9, 2.9, 2.5, 3.2],
+      backgroundColor:[
+        "#DCDCDC",
+        "#DCDCDC",
+        "#DCDCDC",
+        "#DCDCDC",
+        "#DCDCDC"
+      ],
+    },
+    {
+      label: 'Growth Rate of SMEs Using PayPal',
       backgroundColor: 'rgb(68, 114, 196)',
       borderColor: 'rgb(68, 114, 196)',
       borderWidth: 1,
       hoverBackgroundColor: 'rgb(68, 114, 196)',
       hoverBorderColor: 'rgb(68, 114, 196)',
+      // data: [6.2, 14.9, 32.8, 36.9],
       data: [6.2, 14.9, 32.8, 36.9],
       backgroundColor:[
         "rgb(68, 114, 196)",
@@ -24,154 +163,109 @@ const data_1 = {
         "rgb(68, 114, 196)"
       ],
     },
+  ]
+}
+
+const data_3 = {
+  labels: ['2013-2014', '2014-2015', '2015-2016','2016-2017'],
+  datasets: [
     {
-      label: 'somethingB',
-      backgroundColor: '#ed7d31',
-      borderColor: '#ed7d31',
+      label: 'Growth Rate of Total Offline Exports',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
       borderWidth: 1,
-      hoverBackgroundColor: '#ed7d31',
-      hoverBorderColor: '#ed7d31',
-      data: [-9.9, 17, 1.7, 1.1],
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      // data: [-9.9, 17, 1.7, 1.1],
+      data: [-9.9],
       backgroundColor:[
-        "#ed7d31",
-        "#ed7d31",
-        "#ed7d31",
-        "#ed7d31",
-        "#ed7d31"
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8"
       ],
     },
     {
-      label: 'somethingC',
-      backgroundColor: '#a5a5a5',
-      borderColor: '#a5a5a5',
+      label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
+      backgroundColor: '#A9A9A9',
+      borderColor: '#A9A9A9',
       borderWidth: 1,
-      hoverBackgroundColor: '#a5a5a5',
-      hoverBorderColor: '#a5a5a5',
+      hoverBackgroundColor: '#A9A9A9',
+      hoverBorderColor: '#A9A9A9',
+      // data: [-9.1, -7.4, -5.6, 3.5],
       data: [-9.1, -7.4, -5.6, 3.5],
       backgroundColor:[
-        "#a5a5a5",
-        "#a5a5a5",
-        "#a5a5a5",
-        "#a5a5a5",
-        "#a5a5a5"
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9"
       ],
     },
     {
-      label: 'somethingD',
-      backgroundColor: '#ffc000',
-      borderColor: '#ffc000',
+      label: 'GDP Growth Rate (Latin America & Caribbean)',
+      backgroundColor: '#BEBEBE',
+      borderColor: '#BEBEBE',
       borderWidth: 1,
-      hoverBackgroundColor: '#ffc000',
-      hoverBorderColor: '#ffc000',
+      hoverBackgroundColor: '#BEBEBE',
+      hoverBorderColor: '#BEBEBE',
+      // data: [1, 0, -0.5, 1.7],
       data: [1, 0, -0.5, 1.7],
       backgroundColor:[
-        "#ffc000",
-        "#ffc000",
-        "#ffc000",
-        "#ffc000",
-        "#ffc000"
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE"
       ],
     },
     {
-      label: 'somethingD',
-      backgroundColor: '#5b9bd5',
-      borderColor: '#5b9bd5',
+      label: 'GDP Growth Rate (world)',
+      backgroundColor: '#DCDCDC',
+      borderColor: '#DCDCDC',
       borderWidth: 1,
-      hoverBackgroundColor: '#5b9bd5',
-      hoverBorderColor: '#5b9bd5',
+      hoverBackgroundColor: '#DCDCDC',
+      hoverBorderColor: '#DCDCDC',
+      // data: [2.9, 2.9, 2.5, 3.2],
       data: [2.9, 2.9, 2.5, 3.2],
       backgroundColor:[
-        "#5b9bd5",
-        "#5b9bd5",
-        "#5b9bd5",
-        "#5b9bd5",
-        "#5b9bd5"
+        "#DCDCDC",
+        "#DCDCDC",
+        "#DCDCDC",
+        "#DCDCDC",
+        "#DCDCDC"
       ],
-    }
+    },
+    {
+      label: 'Growth Rate of SMEs Using PayPal',
+      backgroundColor: 'rgb(68, 114, 196)',
+      borderColor: 'rgb(68, 114, 196)',
+      borderWidth: 1,
+      hoverBackgroundColor: 'rgb(68, 114, 196)',
+      hoverBorderColor: 'rgb(68, 114, 196)',
+      // data: [6.2, 14.9, 32.8, 36.9],
+      data: [6.2, 14.9, 32.8, 36.9],
+      backgroundColor:[
+        "rgb(68, 114, 196)",
+        "rgb(68, 114, 196)",
+        "rgb(68, 114, 196)",
+        "rgb(68, 114, 196)",
+        "rgb(68, 114, 196)"
+      ],
+    },
   ]
-};
-//   const data_2= {
-//   labels: ['new entrants using PayPal', 'incumbent small businesses using PayPal'],
-//   datasets: [
-//     {
-//       backgroundColor: 'rgb(68, 114, 196)',
-//       borderColor: 'rgb(68, 114, 196)',
-//       borderWidth: 1,
-//       hoverBackgroundColor: 'rgb(68, 114, 196)',
-//       hoverBorderColor: 'rgb(68, 114, 196)',
-//       data: [27, -127]
-//     }
-//   ]
-//
-//
-// };
+}
+
 const options= {
     scales: {
         yAxes: [{ticks: {padding: -78,
         },
         scaleLabel:false,
       gridLines:false}]
-    }
-}
-  // const data_3 =  {
-  //      labels: ['2013', '2014', '2015', '2016', '2017'],
-  //
-  //   datasets: [
-  //     {
-  //     label: '',
-  //     data: [100, 108, 110, 113, 120],
-  //     lineTension: 0,
-  //     fill: true,
-  //     borderColor: 'rgb(31, 119, 180)',
-  //     borderWidth:5,
-  //     backgroundColor: 'transparent',
-  //     pointBorderColor: 'rgb(31, 119, 180)',
-  //     pointBackgroundColor: 'rgb(31, 119, 180)',
-  //     pointRadius: 10,
-  //     pointHoverRadius: 15,
-  //     pointHitRadius: 30,
-  //     pointBorderWidth: 2,
-  //     pointStyle: 'circle',
-  //
-  //     }
-  //
-  //   ]
-  // }
-  const options_1 = {
-      legend: {
-        display: false
     },
-  scaleShowGridLines: true,
-  scaleGridLineColor: 'rgba(0,0,0,.05)',
-  scaleGridLineWidth: 1,
-  scaleShowHorizontalLines: true,
-  scaleShowVerticalLines: true,
-  bezierCurve: true,
-  bezierCurveTension: 0.4,
-  pointDot: true,
-  scales: {
-    yAxes: [{
-        ticks: {
-            min: 98,
-            callback: function(value, index, values) {
-                return '';
-            },
-        },
-        gridLines: {
-            display: false,
-            drawBorder: false,
-            borderDash:[]
-        },
-    }]
-  },
-  pointDotRadius: 4,
-  pointDotStrokeWidth: 1,
-
-  datasetStroke: true,
-  datasetStrokeWidth: 2,
-  datasetFill: true,
-
 }
+
  const sngl_bar = value => {
    return 'rgb(68, 114, 196)';
  };
@@ -180,7 +274,7 @@ class Argentina extends Component {
         super(props);
         this.play = this.play.bind(this);
         this.pause = this.pause.bind(this);
-        this.state = { width: window.innerWidth, }; // responsive mobile
+        this.state = { width: window.innerWidth,  chartData: data_1}; // responsive mobile
       }
 
       play() {
@@ -205,6 +299,139 @@ class Argentina extends Component {
           this.setState({ width: window.innerWidth });
         };
 
+  animation(data, datasetPosition) {
+    const oldState = this.state.chartData;
+
+    let datasets = oldState.datasets;
+    datasets[datasetPosition] = data;
+    const newState = Object.assign({}, oldState, {
+      datasets: datasets
+    })
+
+    this.setState({
+      chartData: newState
+    })
+    // let newData = this.state.chartData.data.labels.push();
+    //
+    // newData.chartData.data.datasets.forEach((dataset) => {
+    //     dataset.data.push(data);
+    // });
+    //
+    // this.setState({chartData: this.state.data}, () =>{
+    //   // called when state applied
+    //   setTimeout
+    // })
+  }
+
+  updateColumn(data, datasetPosition) {
+    const oldState = this.state.chartData;
+
+    let datasets = oldState.datasets;
+    datasets[datasetPosition] = data;
+    const newState = Object.assign({}, oldState, {
+      datasets: datasets
+    })
+
+    this.setState({
+      chartData: newState
+    })
+  }
+
+  componentDidMount() {
+
+    setTimeout(() => this.animation({
+      label: 'Growth Rate of PayPal Mirror Basket of Offline Exports 1',
+      backgroundColor: '#A9A9A9',
+      borderColor: '#A9A9A9',
+      borderWidth: 1,
+      hoverBackgroundColor: '#A9A9A9',
+      hoverBorderColor: '#A9A9A9',
+      // data: [-9.1, -7.4, -5.6, 3.5],
+      data: [10],
+      backgroundColor:[
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9"
+      ],
+    }, 0), 1000)
+
+    setTimeout(() => this.animation({
+          label: 'Growth Rate of PayPal Mirror Basket of Offline Exports 2',
+          backgroundColor: '#A9A9A9',
+          borderColor: '#A9A9A9',
+          borderWidth: 1,
+          hoverBackgroundColor: '#A9A9A9',
+          hoverBorderColor: '#A9A9A9',
+          // data: [-9.1, -7.4, -5.6, 3.5],
+          data: [10],
+          backgroundColor:[
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9"
+          ],
+        }, 1), 2000)
+        //
+    setTimeout(() => this.animation({
+      label: 'GDP Growth Rate (Latin America & Caribbean)',
+      backgroundColor: '#BEBEBE',
+      borderColor: '#BEBEBE',
+      borderWidth: 1,
+      hoverBackgroundColor: '#BEBEBE',
+      hoverBorderColor: '#BEBEBE',
+      // data: [1, 0, -0.5, 1.7],
+      data: [10],
+      backgroundColor:[
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE"
+      ],
+    }, 2), 3000)
+
+    setTimeout(() => this.animation({
+      label: 'GDP Growth Rate (Latin America & Caribbean) 2',
+      backgroundColor: '#BEBEBE',
+      borderColor: '#BEBEBE',
+      borderWidth: 1,
+      hoverBackgroundColor: '#BEBEBE',
+      hoverBorderColor: '#BEBEBE',
+      // data: [1, 0, -0.5, 1.7],
+      data: [10],
+      backgroundColor:[
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE",
+        "#BEBEBE"
+      ],
+    }, 3), 4000)
+
+
+    setTimeout(() => this.updateColumn({
+      label: 'Growth Rate of PayPal Mirror Basket of Offline Exports 1',
+      backgroundColor: '#A9A9A9',
+      borderColor: '#A9A9A9',
+      borderWidth: 1,
+      hoverBackgroundColor: '#A9A9A9',
+      hoverBorderColor: '#A9A9A9',
+      // data: [-9.1, -7.4, -5.6, 3.5],
+      data: [10, 11],
+      backgroundColor:[
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9",
+        "#A9A9A9"
+      ],
+    }, 0), 5000)
+  }
+
+
     // responsive mobile end...
     render(){
         const settings = {
@@ -224,7 +451,6 @@ class Argentina extends Component {
                 <div>
 
                       <Slider ref={slider => (this.slider = slider)} {...settings}>
-
                         <div className="br_sldr_upr">
                           <div className="bar_graph bar_sldr">
                             {/* <h2 style={{textAlign: 'center'}}>Change in number of trade partners between 2013 and 2017</h2> */}
@@ -249,6 +475,79 @@ class Argentina extends Component {
                                 },
                               }}
                             />
+                          </div>
+                        </div>
+                        <div className="br_sldr_upr">
+                          <div className="bar_graph bar_sldr">
+                            {/* <h2 style={{textAlign: 'center'}}>Change in number of trade partners between 2013 and 2017</h2> */}
+                            <Bar
+                              data={data_2}
+                              width={320}
+                              height={400}
+                              margin={{top: 10, bottom: 50, left: 50, right: 10}}
+                              options={{
+                                legend: {
+                                  display: false
+                                },
+                                scales: {
+                                  yAxes: [{
+                                    ticks: {
+                                      beginAtZero:true,
+                                      callback: function(value, index, values) {
+                                        return (value*1)+'%';
+                                      },
+                                    },
+                                  }]
+                                },
+                              }}
+                            />
+                            <Bar
+                              data={data_2}
+                              width={320}
+                              height={400}
+                              margin={{top: 10, bottom: 50, left: 50, right: 10}}
+                              options={{
+                                legend: {
+                                  display: false
+                                },
+                                scales: {
+                                  yAxes: [{
+                                    ticks: {
+                                      beginAtZero:true,
+                                      callback: function(value, index, values) {
+                                        return (value*1)+'%';
+                                      },
+                                    },
+                                  }]
+                                },
+                              }}
+                            />
+                          </div>
+                        </div>
+
+                        <div className="br_sldr_upr">
+                          <div className="bar_graph bar_sldr">
+                          <Bar
+                            data={data_3}
+                            width={320}
+                            height={400}
+                            margin={{top: 10, bottom: 50, left: 50, right: 10}}
+                            options={{
+                              legend: {
+                                display: false
+                              },
+                              scales: {
+                                yAxes: [{
+                                  ticks: {
+                                    beginAtZero:true,
+                                    callback: function(value, index, values) {
+                                      return (value*1)+'%';
+                                    },
+                                  },
+                                }]
+                              },
+                            }}
+                          />
                           </div>
                         </div>
                       </Slider>
@@ -291,19 +590,21 @@ class Argentina extends Component {
           else{
             return(
                 <div>
-
                       <Slider ref={slider => (this.slider = slider)} {...settings}>
                         <div className="br_sldr_upr">
                           <div className="bar_graph bar_sldr">
                             {/* <h2 style={{textAlign: 'center'}}>Change in number of trade partners between 2013 and 2017</h2> */}
                             <Bar
-                              data={data_1}
+                              data={this.state.chartData}
                               width={680}
                               height={400}
                               margin={{top: 10, bottom: 50, left: 50, right: 10}}
                               options={{
                                 legend: {
                                   display: false
+                                },
+                                animation:{
+                                  duration:10000
                                 },
                                 scales: {
                                   yAxes: [{
@@ -354,9 +655,6 @@ class Argentina extends Component {
                         </a>
                       </div>
                     </div>
-
-
-
             );
           }
     }

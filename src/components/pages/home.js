@@ -28,7 +28,6 @@ class Home extends Component {
 	{
 		this.setState({ div: <Argentina />});
 
-
 	}
 	else if(event.target.value === "Colombia")
 	{
