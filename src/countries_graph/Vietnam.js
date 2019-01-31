@@ -266,353 +266,353 @@ class Vietnam extends Component {
     }
 
     componentDidMount() {
-    setTimeout(() => this.animation({
-      label: 'Growth Rate of Total Offline Exports',
-      backgroundColor: '#C8C8C8',
-      borderColor: '#C8C8C8',
-      borderWidth: 1,
-      hoverBackgroundColor: '#C8C8C8',
-      hoverBorderColor: '#C8C8C8',
-      data: [13.8],
-      backgroundColor:[
-        "#C8C8C8",
-        "#C8C8C8",
-        "#C8C8C8",
-        "#C8C8C8",
-        "#C8C8C8"
-      ],
-    }, 0), 500)
+      setTimeout(() => this.animation({
+        label: 'Growth Rate of Total Offline Exports',
+        backgroundColor: '#C8C8C8',
+        borderColor: '#C8C8C8',
+        borderWidth: 1,
+        hoverBackgroundColor: '#C8C8C8',
+        hoverBorderColor: '#C8C8C8',
+        data: [13.8],
+        backgroundColor:[
+          "#C8C8C8",
+          "#C8C8C8",
+          "#C8C8C8",
+          "#C8C8C8",
+          "#C8C8C8"
+        ],
+      }, 0), 500)
 
-    setTimeout(() => this.animation({
-          label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
-          backgroundColor: '#A9A9A9',
-          borderColor: '#A9A9A9',
-          borderWidth: 1,
-          hoverBackgroundColor: '#A9A9A9',
-          hoverBorderColor: '#A9A9A9',
-          data: [18.9],
-          backgroundColor:[
-            "#A9A9A9",
-            "#A9A9A9",
-            "#A9A9A9",
-            "#A9A9A9",
-            "#A9A9A9"
-          ],
-        }, 1), 1000)
-        //
-    setTimeout(() => this.animation({
-      label: 'GDP Growth Rate (Latin America & Caribbean)',
-      backgroundColor: '#BEBEBE',
-      borderColor:'#BEBEBE',
-      borderWidth: 1,
-      hoverBackgroundColor:'#BEBEBE',
-      hoverBorderColor:'#BEBEBE',
-      // data: [1, 0, -0.5, 1.7],
-      data: [6.8],
-      backgroundColor:[
-        '#BEBEBE',
-        '#BEBEBE',
-        '#BEBEBE',
-        '#BEBEBE',
-        '#BEBEBE'
-      ],
-    }, 2), 1500)
+      setTimeout(() => this.animation({
+            label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
+            backgroundColor: '#A9A9A9',
+            borderColor: '#A9A9A9',
+            borderWidth: 1,
+            hoverBackgroundColor: '#A9A9A9',
+            hoverBorderColor: '#A9A9A9',
+            data: [18.9],
+            backgroundColor:[
+              "#A9A9A9",
+              "#A9A9A9",
+              "#A9A9A9",
+              "#A9A9A9",
+              "#A9A9A9"
+            ],
+          }, 1), 1000)
+          //
+      setTimeout(() => this.animation({
+        label: 'GDP Growth Rate (Latin America & Caribbean)',
+        backgroundColor: '#BEBEBE',
+        borderColor:'#BEBEBE',
+        borderWidth: 1,
+        hoverBackgroundColor:'#BEBEBE',
+        hoverBorderColor:'#BEBEBE',
+        // data: [1, 0, -0.5, 1.7],
+        data: [6.8],
+        backgroundColor:[
+          '#BEBEBE',
+          '#BEBEBE',
+          '#BEBEBE',
+          '#BEBEBE',
+          '#BEBEBE'
+        ],
+      }, 2), 1500)
 
-    setTimeout(() => this.animation({
-      label: 'GDP Growth Rate (world)',
-      backgroundColor: '#DCDCDC',
-      borderColor: '#DCDCDC',
-      borderWidth: 1,
-      hoverBackgroundColor: '#DCDCDC',
-      hoverBorderColor: '#DCDCDC',
-      // data: [2.9, 2.9, 2.5, 3.2],
-      data: [2.9],
-      backgroundColor:[
-        '#DCDCDC',
-        '#DCDCDC',
-        '#DCDCDC',
-        '#DCDCDC',
-        '#DCDCDC'
-      ],
-    }, 3), 2000)
+      setTimeout(() => this.animation({
+        label: 'GDP Growth Rate (world)',
+        backgroundColor: '#DCDCDC',
+        borderColor: '#DCDCDC',
+        borderWidth: 1,
+        hoverBackgroundColor: '#DCDCDC',
+        hoverBorderColor: '#DCDCDC',
+        // data: [2.9, 2.9, 2.5, 3.2],
+        data: [2.9],
+        backgroundColor:[
+          '#DCDCDC',
+          '#DCDCDC',
+          '#DCDCDC',
+          '#DCDCDC',
+          '#DCDCDC'
+        ],
+      }, 3), 2000)
 
-    setTimeout(() => this.animation({
-      label: 'Growth Rate of SMEs Using PayPal',
-      backgroundColor: '#4472c4',
-      borderColor: '#4472c4',
-      borderWidth: 1,
-      hoverBackgroundColor: '#4472c4',
-      hoverBorderColor: '#4472c4',
-      // data: [6.2, 14.9, 32.8, 36.9],
-      data: [73.9],
-      backgroundColor:[
-        '#4472c4',
-        '#4472c4',
-        '#4472c4',
-        '#4472c4',
-        '#4472c4'
-      ],
-    }, 4), 2500)
-
-
-    setTimeout(() => this.updateColumn({
-      label: 'Growth Rate of Total Offline Exports',
-      backgroundColor: '#C8C8C8',
-      borderColor: '#C8C8C8',
-      borderWidth: 1,
-      hoverBackgroundColor: '#C8C8C8',
-      hoverBorderColor: '#C8C8C8',
-      data: [13.8, 7.9],
-      backgroundColor:[
-        "#C8C8C8",
-        "#C8C8C8",
-        "#C8C8C8",
-        "#C8C8C8",
-        "#C8C8C8"
-      ],
-    }, 0), 3000)
-
-    setTimeout(() => this.updateColumn({
-          label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
-          backgroundColor: '#A9A9A9',
-          borderColor: '#A9A9A9',
-          borderWidth: 1,
-          hoverBackgroundColor: '#A9A9A9',
-          hoverBorderColor: '#A9A9A9',
-          data: [18.9, 13.8],
-          backgroundColor:[
-            "#A9A9A9",
-            "#A9A9A9",
-            "#A9A9A9",
-            "#A9A9A9",
-            "#A9A9A9"
-          ],
-        }, 1), 3500)
-        //
-    setTimeout(() => this.updateColumn({
-      label: 'GDP Growth Rate (Latin America & Caribbean)',
-      backgroundColor: '#BEBEBE',
-      borderColor:'#BEBEBE',
-      borderWidth: 1,
-      hoverBackgroundColor:'#BEBEBE',
-      hoverBorderColor:'#BEBEBE',
-      data: [6.8, 6.5],
-      backgroundColor:[
-        '#BEBEBE',
-        '#BEBEBE',
-        '#BEBEBE',
-        '#BEBEBE',
-        '#BEBEBE'
-      ],
-    }, 2), 4500)
-
-    setTimeout(() => this.updateColumn({
-      label: 'GDP Growth Rate (world)',
-      backgroundColor: '#DCDCDC',
-      borderColor: '#DCDCDC',
-      borderWidth: 1,
-      hoverBackgroundColor: '#DCDCDC',
-      hoverBorderColor: '#DCDCDC',
-      data: [2.9, 2.9],
-      backgroundColor:[
-        '#DCDCDC',
-        '#DCDCDC',
-        '#DCDCDC',
-        '#DCDCDC',
-        '#DCDCDC'
-      ],
-    }, 3), 5000)
-
-    setTimeout(() => this.updateColumn({
-      label: 'Growth Rate of SMEs Using PayPal',
-      backgroundColor: '#4472c4',
-      borderColor: '#4472c4',
-      borderWidth: 1,
-      hoverBackgroundColor: '#4472c4',
-      hoverBorderColor: '#4472c4',
-      data: [73.9, 79.5],
-      backgroundColor:[
-        '#4472c4',
-        '#4472c4',
-        '#4472c4',
-        '#4472c4',
-        '#4472c4'
-      ],
-    }, 4), 5500)
-
-    setTimeout(() => this.updateColumn({
-      label: 'Growth Rate of Total Offline Exports',
-      backgroundColor: '#C8C8C8',
-      borderColor: '#C8C8C8',
-      borderWidth: 1,
-      hoverBackgroundColor: '#C8C8C8',
-      hoverBorderColor: '#C8C8C8',
-      data: [13.8, 7.9, 9],
-      backgroundColor:[
-        "#C8C8C8",
-        "#C8C8C8",
-        "#C8C8C8",
-        "#C8C8C8",
-        "#C8C8C8"
-      ],
-    }, 0), 6000)
+      setTimeout(() => this.animation({
+        label: 'Growth Rate of SMEs Using PayPal',
+        backgroundColor: '#4472c4',
+        borderColor: '#4472c4',
+        borderWidth: 1,
+        hoverBackgroundColor: '#4472c4',
+        hoverBorderColor: '#4472c4',
+        // data: [6.2, 14.9, 32.8, 36.9],
+        data: [73.9],
+        backgroundColor:[
+          '#4472c4',
+          '#4472c4',
+          '#4472c4',
+          '#4472c4',
+          '#4472c4'
+        ],
+      }, 4), 2500)
 
 
-    setTimeout(() => this.updateColumn({
-          label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
-          backgroundColor: '#A9A9A9',
-          borderColor: '#A9A9A9',
-          borderWidth: 1,
-          hoverBackgroundColor: '#A9A9A9',
-          hoverBorderColor: '#A9A9A9',
-          data: [18.9, 13.8, 14.9],
-          backgroundColor:[
-            "#A9A9A9",
-            "#A9A9A9",
-            "#A9A9A9",
-            "#A9A9A9",
-            "#A9A9A9"
-          ],
-        }, 1), 6500)
-        //
-    setTimeout(() => this.updateColumn({
-      label: 'GDP Growth Rate (Latin America & Caribbean)',
-      backgroundColor: '#BEBEBE',
-      borderColor:'#BEBEBE',
-      borderWidth: 1,
-      hoverBackgroundColor:'#BEBEBE',
-      hoverBorderColor:'#BEBEBE',
-      data: [6.8, 6.5, 6.3],
-      backgroundColor:[
-        '#BEBEBE',
-        '#BEBEBE',
-        '#BEBEBE',
-        '#BEBEBE',
-        '#BEBEBE'
-      ],
-    }, 2), 7000)
+      setTimeout(() => this.updateColumn({
+        label: 'Growth Rate of Total Offline Exports',
+        backgroundColor: '#C8C8C8',
+        borderColor: '#C8C8C8',
+        borderWidth: 1,
+        hoverBackgroundColor: '#C8C8C8',
+        hoverBorderColor: '#C8C8C8',
+        data: [13.8, 7.9],
+        backgroundColor:[
+          "#C8C8C8",
+          "#C8C8C8",
+          "#C8C8C8",
+          "#C8C8C8",
+          "#C8C8C8"
+        ],
+      }, 0), 3000)
 
-    setTimeout(() => this.updateColumn({
-      label: 'GDP Growth Rate (world)',
-      backgroundColor: '#DCDCDC',
-      borderColor: '#DCDCDC',
-      borderWidth: 1,
-      hoverBackgroundColor: '#DCDCDC',
-      hoverBorderColor: '#DCDCDC',
-      data: [2.9, 2.9, 2.5],
-      backgroundColor:[
-        '#DCDCDC',
-        '#DCDCDC',
-        '#DCDCDC',
-        '#DCDCDC',
-        '#DCDCDC'
-      ],
-    }, 3), 7500)
+      setTimeout(() => this.updateColumn({
+            label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
+            backgroundColor: '#A9A9A9',
+            borderColor: '#A9A9A9',
+            borderWidth: 1,
+            hoverBackgroundColor: '#A9A9A9',
+            hoverBorderColor: '#A9A9A9',
+            data: [18.9, 13.8],
+            backgroundColor:[
+              "#A9A9A9",
+              "#A9A9A9",
+              "#A9A9A9",
+              "#A9A9A9",
+              "#A9A9A9"
+            ],
+          }, 1), 3500)
+          //
+      setTimeout(() => this.updateColumn({
+        label: 'GDP Growth Rate (Latin America & Caribbean)',
+        backgroundColor: '#BEBEBE',
+        borderColor:'#BEBEBE',
+        borderWidth: 1,
+        hoverBackgroundColor:'#BEBEBE',
+        hoverBorderColor:'#BEBEBE',
+        data: [6.8, 6.5],
+        backgroundColor:[
+          '#BEBEBE',
+          '#BEBEBE',
+          '#BEBEBE',
+          '#BEBEBE',
+          '#BEBEBE'
+        ],
+      }, 2), 4500)
 
-    setTimeout(() => this.updateColumn({
-      label: 'Growth Rate of SMEs Using PayPal',
-      backgroundColor: '#4472c4',
-      borderColor: '#4472c4',
-      borderWidth: 1,
-      hoverBackgroundColor: '#4472c4',
-      hoverBorderColor: '#4472c4',
-      data: [73.9, 79.5, 76.4],
-      backgroundColor:[
-        '#4472c4',
-        '#4472c4',
-        '#4472c4',
-        '#4472c4',
-        '#4472c4'
-      ],
-    }, 4), 8500)
+      setTimeout(() => this.updateColumn({
+        label: 'GDP Growth Rate (world)',
+        backgroundColor: '#DCDCDC',
+        borderColor: '#DCDCDC',
+        borderWidth: 1,
+        hoverBackgroundColor: '#DCDCDC',
+        hoverBorderColor: '#DCDCDC',
+        data: [2.9, 2.9],
+        backgroundColor:[
+          '#DCDCDC',
+          '#DCDCDC',
+          '#DCDCDC',
+          '#DCDCDC',
+          '#DCDCDC'
+        ],
+      }, 3), 5000)
 
-    setTimeout(() => this.updateColumn({
-      label: 'Growth Rate of Total Offline Exports',
-      backgroundColor: '#C8C8C8',
-      borderColor: '#C8C8C8',
-      borderWidth: 1,
-      hoverBackgroundColor: '#C8C8C8',
-      hoverBorderColor: '#C8C8C8',
-      data: [13.8, 7.9, 9, 21.2],
-      backgroundColor:[
-        "#C8C8C8",
-        "#C8C8C8",
-        "#C8C8C8",
-        "#C8C8C8",
-        "#C8C8C8"
-      ],
-    }, 0), 9000)
+      setTimeout(() => this.updateColumn({
+        label: 'Growth Rate of SMEs Using PayPal',
+        backgroundColor: '#4472c4',
+        borderColor: '#4472c4',
+        borderWidth: 1,
+        hoverBackgroundColor: '#4472c4',
+        hoverBorderColor: '#4472c4',
+        data: [73.9, 79.5],
+        backgroundColor:[
+          '#4472c4',
+          '#4472c4',
+          '#4472c4',
+          '#4472c4',
+          '#4472c4'
+        ],
+      }, 4), 5500)
+
+      setTimeout(() => this.updateColumn({
+        label: 'Growth Rate of Total Offline Exports',
+        backgroundColor: '#C8C8C8',
+        borderColor: '#C8C8C8',
+        borderWidth: 1,
+        hoverBackgroundColor: '#C8C8C8',
+        hoverBorderColor: '#C8C8C8',
+        data: [13.8, 7.9, 9],
+        backgroundColor:[
+          "#C8C8C8",
+          "#C8C8C8",
+          "#C8C8C8",
+          "#C8C8C8",
+          "#C8C8C8"
+        ],
+      }, 0), 6000)
 
 
-    setTimeout(() => this.updateColumn({
-          label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
-          backgroundColor: '#A9A9A9',
-          borderColor: '#A9A9A9',
-          borderWidth: 1,
-          hoverBackgroundColor: '#A9A9A9',
-          hoverBorderColor: '#A9A9A9',
-          data: [18.9, 13.8, 14.9, 12.2],
-          backgroundColor:[
-            "#A9A9A9",
-            "#A9A9A9",
-            "#A9A9A9",
-            "#A9A9A9",
-            "#A9A9A9"
-          ],
-        }, 1), 9500)
-        //
-    setTimeout(() => this.updateColumn({
-      label: 'GDP Growth Rate (Latin America & Caribbean)',
-      backgroundColor: '#BEBEBE',
-      borderColor:'#BEBEBE',
-      borderWidth: 1,
-      hoverBackgroundColor:'#BEBEBE',
-      hoverBorderColor:'#BEBEBE',
-      data:[6.8, 6.5, 6.3, 6.6],
-      backgroundColor:[
-        '#BEBEBE',
-        '#BEBEBE',
-        '#BEBEBE',
-        '#BEBEBE',
-        '#BEBEBE'
-      ],
-    }, 2), 10000)
+      setTimeout(() => this.updateColumn({
+            label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
+            backgroundColor: '#A9A9A9',
+            borderColor: '#A9A9A9',
+            borderWidth: 1,
+            hoverBackgroundColor: '#A9A9A9',
+            hoverBorderColor: '#A9A9A9',
+            data: [18.9, 13.8, 14.9],
+            backgroundColor:[
+              "#A9A9A9",
+              "#A9A9A9",
+              "#A9A9A9",
+              "#A9A9A9",
+              "#A9A9A9"
+            ],
+          }, 1), 6500)
+          //
+      setTimeout(() => this.updateColumn({
+        label: 'GDP Growth Rate (Latin America & Caribbean)',
+        backgroundColor: '#BEBEBE',
+        borderColor:'#BEBEBE',
+        borderWidth: 1,
+        hoverBackgroundColor:'#BEBEBE',
+        hoverBorderColor:'#BEBEBE',
+        data: [6.8, 6.5, 6.3],
+        backgroundColor:[
+          '#BEBEBE',
+          '#BEBEBE',
+          '#BEBEBE',
+          '#BEBEBE',
+          '#BEBEBE'
+        ],
+      }, 2), 7000)
 
-    setTimeout(() => this.updateColumn({
-      label: 'GDP Growth Rate (world)',
-      backgroundColor: '#DCDCDC',
-      borderColor: '#DCDCDC',
-      borderWidth: 1,
-      hoverBackgroundColor: '#DCDCDC',
-      hoverBorderColor: '#DCDCDC',
-      data: [2.9, 2.9, 2.5, 3.2],
-      backgroundColor:[
-        '#DCDCDC',
-        '#DCDCDC',
-        '#DCDCDC',
-        '#DCDCDC',
-        '#DCDCDC'
-      ],
-    }, 3), 10500)
+      setTimeout(() => this.updateColumn({
+        label: 'GDP Growth Rate (world)',
+        backgroundColor: '#DCDCDC',
+        borderColor: '#DCDCDC',
+        borderWidth: 1,
+        hoverBackgroundColor: '#DCDCDC',
+        hoverBorderColor: '#DCDCDC',
+        data: [2.9, 2.9, 2.5],
+        backgroundColor:[
+          '#DCDCDC',
+          '#DCDCDC',
+          '#DCDCDC',
+          '#DCDCDC',
+          '#DCDCDC'
+        ],
+      }, 3), 7500)
 
-    setTimeout(() => this.updateColumn({
-      label: 'Growth Rate of SMEs Using PayPal',
-      backgroundColor: '#4472c4',
-      borderColor: '#4472c4',
-      borderWidth: 1,
-      hoverBackgroundColor: '#4472c4',
-      hoverBorderColor: '#4472c4',
-      data: [73.9, 79.5, 76.4, 69.3],
-      backgroundColor:[
-        '#4472c4',
-        '#4472c4',
-        '#4472c4',
-        '#4472c4',
-        '#4472c4'
-      ],
-    }, 4), 11000)
+      setTimeout(() => this.updateColumn({
+        label: 'Growth Rate of SMEs Using PayPal',
+        backgroundColor: '#4472c4',
+        borderColor: '#4472c4',
+        borderWidth: 1,
+        hoverBackgroundColor: '#4472c4',
+        hoverBorderColor: '#4472c4',
+        data: [73.9, 79.5, 76.4],
+        backgroundColor:[
+          '#4472c4',
+          '#4472c4',
+          '#4472c4',
+          '#4472c4',
+          '#4472c4'
+        ],
+      }, 4), 8500)
 
-}
+      setTimeout(() => this.updateColumn({
+        label: 'Growth Rate of Total Offline Exports',
+        backgroundColor: '#C8C8C8',
+        borderColor: '#C8C8C8',
+        borderWidth: 1,
+        hoverBackgroundColor: '#C8C8C8',
+        hoverBorderColor: '#C8C8C8',
+        data: [13.8, 7.9, 9, 21.2],
+        backgroundColor:[
+          "#C8C8C8",
+          "#C8C8C8",
+          "#C8C8C8",
+          "#C8C8C8",
+          "#C8C8C8"
+        ],
+      }, 0), 9000)
+
+
+      setTimeout(() => this.updateColumn({
+            label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
+            backgroundColor: '#A9A9A9',
+            borderColor: '#A9A9A9',
+            borderWidth: 1,
+            hoverBackgroundColor: '#A9A9A9',
+            hoverBorderColor: '#A9A9A9',
+            data: [18.9, 13.8, 14.9, 12.2],
+            backgroundColor:[
+              "#A9A9A9",
+              "#A9A9A9",
+              "#A9A9A9",
+              "#A9A9A9",
+              "#A9A9A9"
+            ],
+          }, 1), 9500)
+          //
+      setTimeout(() => this.updateColumn({
+        label: 'GDP Growth Rate (Latin America & Caribbean)',
+        backgroundColor: '#BEBEBE',
+        borderColor:'#BEBEBE',
+        borderWidth: 1,
+        hoverBackgroundColor:'#BEBEBE',
+        hoverBorderColor:'#BEBEBE',
+        data:[6.8, 6.5, 6.3, 6.6],
+        backgroundColor:[
+          '#BEBEBE',
+          '#BEBEBE',
+          '#BEBEBE',
+          '#BEBEBE',
+          '#BEBEBE'
+        ],
+      }, 2), 10000)
+
+      setTimeout(() => this.updateColumn({
+        label: 'GDP Growth Rate (world)',
+        backgroundColor: '#DCDCDC',
+        borderColor: '#DCDCDC',
+        borderWidth: 1,
+        hoverBackgroundColor: '#DCDCDC',
+        hoverBorderColor: '#DCDCDC',
+        data: [2.9, 2.9, 2.5, 3.2],
+        backgroundColor:[
+          '#DCDCDC',
+          '#DCDCDC',
+          '#DCDCDC',
+          '#DCDCDC',
+          '#DCDCDC'
+        ],
+      }, 3), 10500)
+
+      setTimeout(() => this.updateColumn({
+        label: 'Growth Rate of SMEs Using PayPal',
+        backgroundColor: '#4472c4',
+        borderColor: '#4472c4',
+        borderWidth: 1,
+        hoverBackgroundColor: '#4472c4',
+        hoverBorderColor: '#4472c4',
+        data: [73.9, 79.5, 76.4, 69.3],
+        backgroundColor:[
+          '#4472c4',
+          '#4472c4',
+          '#4472c4',
+          '#4472c4',
+          '#4472c4'
+        ],
+      }, 4), 11000)
+
+  }
 
 
 render(){
