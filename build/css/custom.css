@@ -25,7 +25,7 @@
    src: url('/fonts/PayPalSansBig-App-Regular.ttf') format('truetype'),
         url('/fonts/PayPalSansBig-App-RegularItalic.ttf') format('truetype');
 
-} 
+}
 .row{
     margin:auto !important;
     padding-left: 15px;  /* 2/1/2019 gs*/
@@ -123,8 +123,14 @@ img {
     font-family: PayPal Sans Big Light;
 }
 .paypal_text {
-    color: #0064c7;
+    color: #000000;
     font-family: PayPal Sans Big Medium;
+}
+
+.paypal_text2{
+  font-size: 44px;
+  color: #000000;
+  font-family: PayPal Sans Big Light;
 }
 .button_sec {
     margin-top: 68px;
@@ -687,5 +693,3 @@ header.header-logo {
         margin-top: 0;
     }
 }
-
-

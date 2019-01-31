@@ -72,7 +72,7 @@ class Home extends Component {
 										<div className="row">
 											<div className="col-sm-12 full_watch">
 												<div className="watch_text">
-													Watch how Merchants on <span className="paypal_text">Paypal</span> survive and thrive compared to offline merchants.
+													Watch how Merchants on <span className="paypal_text2">Paypal</span> survive and thrive compared to offline merchants.
 												</div>
 											</div>
 											<div class="blue-border"></div>

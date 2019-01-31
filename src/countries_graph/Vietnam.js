@@ -13,6 +13,407 @@ const data_1 = {
       label: 'Growth Rate of Total Offline Exports',
       backgroundColor: '#C8C8C8',
       borderColor: '#C8C8C8',
+      borderWidth: 0,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      data: [13.8,],
+      backgroundColor:[
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+      ],
+    },
+    {
+      label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
+      borderWidth: 0,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      data: [18.9],
+      backgroundColor:[
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+      ],
+    },
+    {
+      label: 'GDP Growth Rate (Latin America & Caribbean)',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
+      borderWidth: 0,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      data: [6.8],
+      backgroundColor:[
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+      ],
+    },
+    {
+      label: 'GDP Growth Rate (World)',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
+      borderWidth: 0,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      data: [2.9],
+      backgroundColor:[
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+      ],
+    },
+    {
+      label: 'Growth Rate of SMEs Using PayPal',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
+      borderWidth: 0,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      data: [73.9],
+      backgroundColor:[
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+        'rgba(200,200, 200, 0)',
+      ],
+    },
+  ]
+}
+
+
+ const sngl_bar = value => {
+   return 'rgb(68, 114, 196)';
+ };
+class Vietnam extends Component {
+    constructor(props) {
+        super(props);
+        this.play = this.play.bind(this);
+        this.pause = this.pause.bind(this);
+        this.state = { width: window.innerWidth,  chartData: data_1}; // responsive mobile
+      }
+
+      play() {
+        this.slider.slickPlay();
+      }
+      pause() {
+        this.slider.slickPause();
+      }
+
+      // responsive mobile Start
+        componentWillMount() {
+          window.addEventListener('resize', this.handleWindowSizeChange);
+        }
+
+        // make sure to remove the listener
+        // when the component is not mounted anymore
+        componentWillUnmount() {
+          window.removeEventListener('resize', this.handleWindowSizeChange);
+        }
+
+        handleWindowSizeChange = () => {
+          this.setState({ width: window.innerWidth });
+        };
+
+  animation(data, datasetPosition) {
+    const oldState = this.state.chartData;
+
+    let datasets = oldState.datasets;
+    datasets[datasetPosition] = data;
+    const newState = Object.assign({}, oldState, {
+      datasets: datasets
+    })
+
+    this.setState({
+      chartData: newState
+    })
+  }
+
+  updateColumn(data, datasetPosition) {
+    const oldState = this.state.chartData;
+
+    let datasets = oldState.datasets;
+    datasets[datasetPosition] = data;
+    const newState = Object.assign({}, oldState, {
+      datasets: datasets
+    })
+
+    this.setState({
+      chartData: newState
+    })
+  }
+
+  componentDidMount() {
+    setTimeout(() => this.animation({
+      label: 'Growth Rate of Total Offline Exports',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
+      borderWidth: 1,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      data: [13.8],
+      backgroundColor:[
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8"
+      ],
+    }, 0), 500)
+
+    setTimeout(() => this.animation({
+          label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
+          backgroundColor: '#A9A9A9',
+          borderColor: '#A9A9A9',
+          borderWidth: 1,
+          hoverBackgroundColor: '#A9A9A9',
+          hoverBorderColor: '#A9A9A9',
+          data: [18.9],
+          backgroundColor:[
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9"
+          ],
+        }, 1), 1000)
+        //
+    setTimeout(() => this.animation({
+      label: 'GDP Growth Rate (Latin America & Caribbean)',
+      backgroundColor: '#BEBEBE',
+      borderColor:'#BEBEBE',
+      borderWidth: 1,
+      hoverBackgroundColor:'#BEBEBE',
+      hoverBorderColor:'#BEBEBE',
+      // data: [1, 0, -0.5, 1.7],
+      data: [6.8],
+      backgroundColor:[
+        '#BEBEBE',
+        '#BEBEBE',
+        '#BEBEBE',
+        '#BEBEBE',
+        '#BEBEBE'
+      ],
+    }, 2), 1500)
+
+    setTimeout(() => this.animation({
+      label: 'GDP Growth Rate (world)',
+      backgroundColor: '#DCDCDC',
+      borderColor: '#DCDCDC',
+      borderWidth: 1,
+      hoverBackgroundColor: '#DCDCDC',
+      hoverBorderColor: '#DCDCDC',
+      // data: [2.9, 2.9, 2.5, 3.2],
+      data: [2.9],
+      backgroundColor:[
+        '#DCDCDC',
+        '#DCDCDC',
+        '#DCDCDC',
+        '#DCDCDC',
+        '#DCDCDC'
+      ],
+    }, 3), 2000)
+
+    setTimeout(() => this.animation({
+      label: 'Growth Rate of SMEs Using PayPal',
+      backgroundColor: '#4472c4',
+      borderColor: '#4472c4',
+      borderWidth: 1,
+      hoverBackgroundColor: '#4472c4',
+      hoverBorderColor: '#4472c4',
+      // data: [6.2, 14.9, 32.8, 36.9],
+      data: [73.9],
+      backgroundColor:[
+        '#4472c4',
+        '#4472c4',
+        '#4472c4',
+        '#4472c4',
+        '#4472c4'
+      ],
+    }, 4), 2500)
+
+
+    setTimeout(() => this.updateColumn({
+      label: 'Growth Rate of Total Offline Exports',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
+      borderWidth: 1,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      data: [13.8, 7.9],
+      backgroundColor:[
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8"
+      ],
+    }, 0), 3000)
+
+    setTimeout(() => this.updateColumn({
+          label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
+          backgroundColor: '#A9A9A9',
+          borderColor: '#A9A9A9',
+          borderWidth: 1,
+          hoverBackgroundColor: '#A9A9A9',
+          hoverBorderColor: '#A9A9A9',
+          data: [18.9, 13.8],
+          backgroundColor:[
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9"
+          ],
+        }, 1), 3500)
+        //
+    setTimeout(() => this.updateColumn({
+      label: 'GDP Growth Rate (Latin America & Caribbean)',
+      backgroundColor: '#BEBEBE',
+      borderColor:'#BEBEBE',
+      borderWidth: 1,
+      hoverBackgroundColor:'#BEBEBE',
+      hoverBorderColor:'#BEBEBE',
+      data: [6.8, 6.5],
+      backgroundColor:[
+        '#BEBEBE',
+        '#BEBEBE',
+        '#BEBEBE',
+        '#BEBEBE',
+        '#BEBEBE'
+      ],
+    }, 2), 4500)
+
+    setTimeout(() => this.updateColumn({
+      label: 'GDP Growth Rate (world)',
+      backgroundColor: '#DCDCDC',
+      borderColor: '#DCDCDC',
+      borderWidth: 1,
+      hoverBackgroundColor: '#DCDCDC',
+      hoverBorderColor: '#DCDCDC',
+      data: [2.9, 2.9],
+      backgroundColor:[
+        '#DCDCDC',
+        '#DCDCDC',
+        '#DCDCDC',
+        '#DCDCDC',
+        '#DCDCDC'
+      ],
+    }, 3), 5000)
+
+    setTimeout(() => this.updateColumn({
+      label: 'Growth Rate of SMEs Using PayPal',
+      backgroundColor: '#4472c4',
+      borderColor: '#4472c4',
+      borderWidth: 1,
+      hoverBackgroundColor: '#4472c4',
+      hoverBorderColor: '#4472c4',
+      data: [73.9, 79.5],
+      backgroundColor:[
+        '#4472c4',
+        '#4472c4',
+        '#4472c4',
+        '#4472c4',
+        '#4472c4'
+      ],
+    }, 4), 5500)
+
+    setTimeout(() => this.updateColumn({
+      label: 'Growth Rate of Total Offline Exports',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
+      borderWidth: 1,
+      hoverBackgroundColor: '#C8C8C8',
+      hoverBorderColor: '#C8C8C8',
+      data: [13.8, 7.9, 9],
+      backgroundColor:[
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8",
+        "#C8C8C8"
+      ],
+    }, 0), 6000)
+
+
+    setTimeout(() => this.updateColumn({
+          label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
+          backgroundColor: '#A9A9A9',
+          borderColor: '#A9A9A9',
+          borderWidth: 1,
+          hoverBackgroundColor: '#A9A9A9',
+          hoverBorderColor: '#A9A9A9',
+          data: [18.9, 13.8, 14.9],
+          backgroundColor:[
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9"
+          ],
+        }, 1), 6500)
+        //
+    setTimeout(() => this.updateColumn({
+      label: 'GDP Growth Rate (Latin America & Caribbean)',
+      backgroundColor: '#BEBEBE',
+      borderColor:'#BEBEBE',
+      borderWidth: 1,
+      hoverBackgroundColor:'#BEBEBE',
+      hoverBorderColor:'#BEBEBE',
+      data: [6.8, 6.5, 6.3],
+      backgroundColor:[
+        '#BEBEBE',
+        '#BEBEBE',
+        '#BEBEBE',
+        '#BEBEBE',
+        '#BEBEBE'
+      ],
+    }, 2), 7000)
+
+    setTimeout(() => this.updateColumn({
+      label: 'GDP Growth Rate (world)',
+      backgroundColor: '#DCDCDC',
+      borderColor: '#DCDCDC',
+      borderWidth: 1,
+      hoverBackgroundColor: '#DCDCDC',
+      hoverBorderColor: '#DCDCDC',
+      data: [2.9, 2.9, 2.5],
+      backgroundColor:[
+        '#DCDCDC',
+        '#DCDCDC',
+        '#DCDCDC',
+        '#DCDCDC',
+        '#DCDCDC'
+      ],
+    }, 3), 7500)
+
+    setTimeout(() => this.updateColumn({
+      label: 'Growth Rate of SMEs Using PayPal',
+      backgroundColor: '#4472c4',
+      borderColor: '#4472c4',
+      borderWidth: 1,
+      hoverBackgroundColor: '#4472c4',
+      hoverBorderColor: '#4472c4',
+      data: [73.9, 79.5, 76.4],
+      backgroundColor:[
+        '#4472c4',
+        '#4472c4',
+        '#4472c4',
+        '#4472c4',
+        '#4472c4'
+      ],
+    }, 4), 8500)
+
+    setTimeout(() => this.updateColumn({
+      label: 'Growth Rate of Total Offline Exports',
+      backgroundColor: '#C8C8C8',
+      borderColor: '#C8C8C8',
       borderWidth: 1,
       hoverBackgroundColor: '#C8C8C8',
       hoverBorderColor: '#C8C8C8',
@@ -24,41 +425,45 @@ const data_1 = {
         "#C8C8C8",
         "#C8C8C8"
       ],
-    },
-    {
-      label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
-      backgroundColor: '#A9A9A9',
-      borderColor: '#A9A9A9',
-      borderWidth: 1,
-      hoverBackgroundColor: '#A9A9A9',
-      hoverBorderColor: '#A9A9A9',
-      data: [18.9, 13.8, 14.9, 12.2],
-      backgroundColor:[
-        "#A9A9A9",
-        "#A9A9A9",
-        "#A9A9A9",
-        "#A9A9A9",
-        "#A9A9A9"
-      ],
-    },
-    {
+    }, 0), 9000)
+
+
+    setTimeout(() => this.updateColumn({
+          label: 'Growth Rate of PayPal Mirror Basket of Offline Exports',
+          backgroundColor: '#A9A9A9',
+          borderColor: '#A9A9A9',
+          borderWidth: 1,
+          hoverBackgroundColor: '#A9A9A9',
+          hoverBorderColor: '#A9A9A9',
+          data: [18.9, 13.8, 14.9, 12.2],
+          backgroundColor:[
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9",
+            "#A9A9A9"
+          ],
+        }, 1), 9500)
+        //
+    setTimeout(() => this.updateColumn({
       label: 'GDP Growth Rate (Latin America & Caribbean)',
       backgroundColor: '#BEBEBE',
-      borderColor: '#BEBEBE',
+      borderColor:'#BEBEBE',
       borderWidth: 1,
-      hoverBackgroundColor: '#BEBEBE',
-      hoverBorderColor: '#BEBEBE',
-      data: [6.8, 6.5, 6.3, 6.6],
+      hoverBackgroundColor:'#BEBEBE',
+      hoverBorderColor:'#BEBEBE',
+      data:[6.8, 6.5, 6.3, 6.6],
       backgroundColor:[
-        "#BEBEBE",
-        "#BEBEBE",
-        "#BEBEBE",
-        "#BEBEBE",
-        "#BEBEBE"
+        '#BEBEBE',
+        '#BEBEBE',
+        '#BEBEBE',
+        '#BEBEBE',
+        '#BEBEBE'
       ],
-    },
-    {
-      label: 'GDP Growth Rate (World)',
+    }, 2), 10000)
+
+    setTimeout(() => this.updateColumn({
+      label: 'GDP Growth Rate (world)',
       backgroundColor: '#DCDCDC',
       borderColor: '#DCDCDC',
       borderWidth: 1,
@@ -66,64 +471,32 @@ const data_1 = {
       hoverBorderColor: '#DCDCDC',
       data: [2.9, 2.9, 2.5, 3.2],
       backgroundColor:[
-        "#DCDCDC",
-        "#DCDCDC",
-        "#DCDCDC",
-        "#DCDCDC",
-        "#DCDCDC"
+        '#DCDCDC',
+        '#DCDCDC',
+        '#DCDCDC',
+        '#DCDCDC',
+        '#DCDCDC'
       ],
-    },
-    {
+    }, 3), 10500)
+
+    setTimeout(() => this.updateColumn({
       label: 'Growth Rate of SMEs Using PayPal',
-      backgroundColor: 'rgb(68, 114, 196)',
-      borderColor: 'rgb(68, 114, 196)',
+      backgroundColor: '#4472c4',
+      borderColor: '#4472c4',
       borderWidth: 1,
-      hoverBackgroundColor: 'rgb(68, 114, 196)',
-      hoverBorderColor: 'rgb(68, 114, 196)',
+      hoverBackgroundColor: '#4472c4',
+      hoverBorderColor: '#4472c4',
       data: [73.9, 79.5, 76.4, 69.3],
       backgroundColor:[
-        "rgb(68, 114, 196)",
-        "rgb(68, 114, 196)",
-        "rgb(68, 114, 196)",
-        "rgb(68, 114, 196)",
-        "rgb(68, 114, 196)"
+        '#4472c4',
+        '#4472c4',
+        '#4472c4',
+        '#4472c4',
+        '#4472c4'
       ],
-    },
-  ]
-};
+    }, 4), 11000)
 
-class Vietnam extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.play = this.play.bind(this);
-        this.pause = this.pause.bind(this);
-        this.state = { width: window.innerWidth, }; // responsive mobile
-
-      }
-
-      play() {
-        this.slider.slickPlay();
-      }
-      pause() {
-        this.slider.slickPause();
-      }
-
-    // responsive mobile Start
-    componentWillMount() {
-      window.addEventListener('resize', this.handleWindowSizeChange);
-    }
-
-    // make sure to remove the listener
-    // when the component is not mounted anymore
-    componentWillUnmount() {
-      window.removeEventListener('resize', this.handleWindowSizeChange);
-    }
-
-    handleWindowSizeChange = () => {
-      this.setState({ width: window.innerWidth });
-    };
-
+}
 // responsive mobile end...
     render(){
         const settings = {
@@ -146,7 +519,7 @@ class Vietnam extends React.Component {
                             <div className="bar_graph bar_sldr">
                               <h2 style={{textAlign: 'center'}}>Growth rate comparison</h2>
                               <Bar
-                              data={data_1}
+                              data={this.state.chartData}
                               width={320}
                               height={400}
                               margin={{top: 10, bottom: 50, left: 50, right: 10}}
@@ -157,7 +530,8 @@ class Vietnam extends React.Component {
                                 scales: {
                                   yAxes: [{
                                     ticks: {
-                                      beginAtZero:true,
+                                      suggestedMax: 100,
+                                      suggestedMin: -5,
                                       callback: function(value, index, values) {
                                         return (value*1)+'%';
                                       },
@@ -191,7 +565,7 @@ class Vietnam extends React.Component {
                            <div className="bar_graph bar_sldr">
                              <h2 style={{textAlign: 'center'}}>Growth rate comparison</h2>
                              <Bar
-                              data={data_1}
+                              data={this.state.chartData}
                               width={680}
                               height={400}
                               margin={{top: 10, bottom: 50, left: 50, right: 10}}
@@ -202,7 +576,8 @@ class Vietnam extends React.Component {
                                 scales: {
                                   yAxes: [{
                                     ticks: {
-                                      beginAtZero:true,
+                                      suggestedMax: 100,
+                                      suggestedMin: -5,
                                       callback: function(value, index, values) {
                                         return (value*1)+'%';
                                       },
