@@ -102,10 +102,9 @@ const sngl_bar = value => {
    return 'rgb(68, 114, 196)';
 };
 
-class Vietnam extends React.Component {
+class Vietnam extends Component {
     constructor(props) {
         super(props);
-
         this.play = this.play.bind(this);
         this.pause = this.pause.bind(this);
         this.state = { width: window.innerWidth, chartData: data_1}; // responsive mobile
@@ -119,20 +118,21 @@ class Vietnam extends React.Component {
         this.slider.slickPause();
       }
 
-    // responsive mobile Start
-    componentWillMount() {
-      window.addEventListener('resize', this.handleWindowSizeChange);
-    }
+      // responsive mobile Start
+        componentWillMount() {
+          window.addEventListener('resize', this.handleWindowSizeChange);
+        }
 
-    // make sure to remove the listener
-    // when the component is not mounted anymore
-    componentWillUnmount() {
-      window.removeEventListener('resize', this.handleWindowSizeChange);
-    }
+        // make sure to remove the listener
+        // when the component is not mounted anymore
+        componentWillUnmount() {
+          window.removeEventListener('resize', this.handleWindowSizeChange);
+        }
 
-    handleWindowSizeChange = () => {
-      this.setState({ width: window.innerWidth });
-    };
+        handleWindowSizeChange = () => {
+          this.setState({ width: window.innerWidth });
+        };
+
 
     animation(data, datasetPosition) {
       if(playChart !== false){
@@ -614,99 +614,98 @@ class Vietnam extends React.Component {
 
 }
 
-// responsive mobile end...
+
 render(){
-    const settings = {
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        accessibility:true,
-        autoplay: false,
-        arrrows:true
-        // autoplaySpeed: 5000
-      };
-      const { width } = this.state; // responsive mobile
-      const isMobile = width <= 500; // responsive mobile
-      if (isMobile) {
-        return(
-           <div>
-                  <Slider ref={slider => (this.slider = slider)} {...settings}>
-                      <div className="br_sldr_upr">
-                        <div className="bar_graph bar_sldr">
-                          <h2 style={{textAlign: 'center'}}>Growth rate comparison</h2>
-                          <Bar
-                          data={this.state.chartData}
-                          width={320}
-                          height={400}
-                          margin={{top: 10, bottom: 50, left: 50, right: 10}}
-                          options={{
-                            legend: {
-                              display: false
-                            },
-                            scales: {
-                              yAxes: [{
-                                ticks: {
-                                  suggestedMax: 100,
-                                  suggestedMin: -5,
-                                  callback: function(value, index, values) {
-                                    return (value*1)+'%';
-                                  },
+        const settings = {
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            accessibility:true,
+            autoplay: false,
+            arrrows:true
+            // autoplaySpeed: 5000
+          };
+          const { width } = this.state; // responsive mobile
+		      const isMobile = width <= 500; // responsive mobile
+          if (isMobile) {
+            return(
+               <div>
+                      <Slider ref={slider => (this.slider = slider)} {...settings}>
+                          <div className="br_sldr_upr">
+                            <div className="bar_graph bar_sldr">
+                              <h2 style={{textAlign: 'center'}}>Growth rate comparison</h2>
+                              <Bar
+                              data={this.state.chartData}
+                              width={320}
+                              height={400}
+                              margin={{top: 10, bottom: 50, left: 50, right: 10}}
+                              options={{
+                                legend: {
+                                  display: false
                                 },
-                              }]
-                            },
-                          }}
-                        />
+                                scales: {
+                                  yAxes: [{
+                                    ticks: {
+                                      suggestedMax: 100,
+                                      suggestedMin: -5,
+                                      callback: function(value, index, values) {
+                                        return (value*1)+'%';
+                                      },
+                                    },
+                                  }]
+                                },
+                              }}
+                            />
+                            </div>
+                          </div>
+                      </Slider>
+                      <div className="ply_pause_btn" style={{ textAlign: "center" }}>
+                        <div className="both_ply_pause">
+                          <button className="button" onClick={this.play}>
+                            <img src="image/play_button.png" />
+                          </button>
+                          <button className="button pause_btn" onClick={this.pause}>
+                            <img src="image/pause_button.png" />
+                          </button>
                         </div>
                       </div>
-                  </Slider>
-                  <div className="ply_pause_btn" style={{ textAlign: "center" }}>
-                    <div className="both_ply_pause">
-                      <button className="button" onClick={this.play}>
-                        <img src="image/play_button.png" />
-                      </button>
-                      <button className="button pause_btn" onClick={this.pause}>
-                        <img src="image/pause_button.png" />
-                      </button>
                     </div>
-                  </div>
-                </div>
-        );
-      }
-      else{
-        return(
-          <div>
+            );
+          }
+          else{
+            return(
+              <div>
 
-                 <Slider ref={slider => (this.slider = slider)} {...settings}>
-                     <div className="br_sldr_upr">
-                       <div className="bar_graph bar_sldr">
-                         <h2 style={{textAlign: 'center'}}>Growth rate comparison</h2>
-                         <Bar
-                          data={this.state.chartData}
-                          width={680}
-                          height={400}
-                          margin={{top: 10, bottom: 50, left: 50, right: 10}}
-                          options={{
-                            legend: {
-                              display: false
-                            },
-                            scales: {
-                              yAxes: [{
-                                ticks: {
-                                  suggestedMax: 100,
-                                  suggestedMin: -5,
-                                  callback: function(value, index, values) {
-                                    return (value*1)+'%';
-                                  },
+                     <Slider ref={slider => (this.slider = slider)} {...settings}>
+                         <div className="br_sldr_upr">
+                           <div className="bar_graph bar_sldr">
+                             <h2 style={{textAlign: 'center'}}>Growth rate comparison</h2>
+                             <Bar
+                              data={this.state.chartData}
+                              width={680}
+                              height={400}
+                              margin={{top: 10, bottom: 50, left: 50, right: 10}}
+                              options={{
+                                legend: {
+                                  display: false
                                 },
-                              }]
-                            },
-                          }}
-                        />
-                       </div>
-                     </div>
+                                scales: {
+                                  yAxes: [{
+                                    ticks: {
+                                      suggestedMax: 100,
+                                      suggestedMin: -5,
+                                      callback: function(value, index, values) {
+                                        return (value*1)+'%';
+                                      },
+                                    },
+                                  }]
+                                },
+                              }}
+                            />
+                           </div>
+                         </div>
 </Slider>
-
 
                      <div className="ply_pause_btn" style={{ textAlign: "center" }}>
                        <div className="both_ply_pause">

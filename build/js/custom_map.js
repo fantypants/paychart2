@@ -3,15 +3,13 @@ $(function () {
                 "india_states": {
                     "links": {
                         'IN_BE': {
-                            factor: 2
+                            factor: 0.2
                             , between: ['IN', 'BE']
                             , attrs: {
                                 "stroke-width": 3
                             }
                             , tooltip: {content: "up - Mumbai"}
                         }
-
-
                     }
                 },
                 "usa_states": {
@@ -99,7 +97,7 @@ $(function () {
                             , tooltip: {content: "Roma - Miami"}
                         }
                         , 'us_BR': {
-                            factor: 0.2
+                            factor: 0.4
                             , between: ['US', 'BR']
                             , attrs: {
                                 "stroke-width": 4
@@ -110,8 +108,14 @@ $(function () {
                 },
                 "belgium_states": {
                     "links": {
-
-
+                      'BE_AR': {
+                          factor: 0.2
+                          , between: ['BE', 'AR']
+                          , attrs: {
+                              "stroke-width": 4
+                          }
+                          , tooltip: {content: "Brussels - Buenos Aires"}
+                      }
                     }
                 },
                 "bulgaria_states": {
@@ -3240,12 +3244,18 @@ $(function () {
 
             map: {
                 name: $cntry_cde,
+                zoom: {
+                    enabled: true
+                },
                 defaultArea: {
                     attrs: {
                         fill: "#90d4f7"
                         , stroke: "#ced8d0"
-                    }
+                    },
+                    height:'1000'
+
                 }
+
                 // Default attributes can be set for all links
                 , defaultLink: {
                     factor: 0.4

@@ -1,3 +1,39 @@
+.year-wrap {
+  font-size: 14;
+}
+
+.test0{
+  position: absolute;
+  font-size: 12px;
+  padding-left: 610px;
+  padding-top: 550px;
+}
+.test1{
+  position: absolute;
+  font-size: 12px;
+  padding-left: 642px;
+  padding-top: 550px;
+}
+.test2{
+  position: absolute;
+  font-size: 12px;
+  padding-left: 673px;
+  padding-top: 550px;
+}
+.test3{
+  position: absolute;
+  font-size: 12px;
+  padding-left: 705px;
+  padding-top: 550px;
+}
+
+.test4{
+  position: absolute;
+  font-size: 12px;
+  padding-left: 740px;
+  padding-top: 550px;
+}
+
 @font-face {
    font-family: 'PayPal Sans Big Medium';
    font-style: normal;
@@ -25,7 +61,7 @@
    src: url('/fonts/PayPalSansBig-App-Regular.ttf') format('truetype'),
         url('/fonts/PayPalSansBig-App-RegularItalic.ttf') format('truetype');
 
-} 
+}
 .row{
     margin:auto !important;
     padding-left: 15px;  /* 2/1/2019 gs*/
@@ -35,9 +71,12 @@
     padding: 80px 80px 30px 80px !important; /* 2/1/2019 gs*/
 }
 .feedback_full { /* 2/1/2019 gs*/
+  justify-content: center;
     padding-bottom: 40px;
 }
 .feed_other { /* 2/1/2019 gs*/
+  justify-content: center;
+  padding-left: 400px;
     padding-top: 37px;
 }
 .right_reserve { /* 2/1/2019 gs*/
@@ -58,12 +97,14 @@
 }
 .bottom_one { /* 2/1/2019 gs*/
     padding-left: 0 !important;
+    justify-content: center;
 }
 .iuv_info { /* 2/1/2019 gs*/
     width: 100%;
     display: inline-flex;
     vertical-align: middle;
     padding-bottom: 14px;
+    justify-content: center;
 }
 .iuv-txt { /* 2/1/2019 gs*/
     font-family: PayPal Sans Big Medium;
@@ -74,6 +115,7 @@
     vertical-align: middle;
     float: left;
     padding-top: 8px;
+    justify-content: center;
 }
 .info-txt { /* 2/1/2019 gs*/
     font-family: PayPal Sans Big Light;
@@ -82,6 +124,7 @@
     color: #ffffff;
     float: right;
     width: 70%;
+    justify-content: center;
 }
 .mobile-bottom { /* 2/1/2019 gs*/
     width: 100%;
@@ -107,11 +150,14 @@
     color: #000;
 }
 .papl-logo {
-    border-right: 5px solid #d8d8d8;
+    /* border-right: 5px solid #d8d8d8; */
     padding-right: 45px;
 }
 .word-logo {
     padding-left: 41px;
+}
+.logo img {
+  height:90%
 }
 img {
     max-width: calc(100% - (0 * 30px));
@@ -123,9 +169,17 @@ img {
     font-family: PayPal Sans Big Light;
 }
 .paypal_text {
-    color: #0064c7;
+    color: #000000;
     font-family: PayPal Sans Big Medium;
 }
+
+.paypal_text2{
+  font-size: 44px;
+  color: #000000;
+  font-family: PayPal Sans Big Light;
+}
+
+
 .button_sec {
     margin-top: 68px;
 }
@@ -177,6 +231,7 @@ img {
 }
 .footer_bottom { /* 2/1/2019 gs*/
     background-color: #0064c7;
+    justify-content: center;
 }
 .love_txt { /* 2/1/2019 gs*/
     font-family: PayPal Sans Big Light;
@@ -400,7 +455,7 @@ header.header-logo {
     height: 39px;
     border-radius: 38px;
     position: relative;
-    right: 141%;
+    right: 136%;
 }
 .both_ply_pause .button:focus {
     outline: none;
@@ -428,8 +483,84 @@ header.header-logo {
     content: url('/image/paypal_icon.png');
     padding-right: 18px;
 }
-@media (max-width: 767px){
 
+.frst_sld {
+    float: left;
+}
+.sldr_dot {
+    background: #009cec;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+.sldr_line {
+    bottom: 15px;
+    background: #eaeaea;
+    width: 75px;
+    height: 8px;
+    position: relative;
+    left: 42px;
+    z-index: -1;
+}
+.sldr_line_last {
+    background: transparent !important;
+}
+.slider_whole_dot {
+    position: relative;
+    right: 96%;
+    top: 114px;
+}
+.year_dot {
+    padding-left: 21px;
+    font-weight: 500;
+}
+.slider_whole_dot_mob {
+    position: absolute;
+    bottom: -90%;
+}
+.both_ply_pause_map {
+    width: 80px;
+    margin: auto;
+    background: #0064c7;
+    height: 39px;
+    border-radius: 38px;
+}
+.both_ply_pause_map .button {
+    background: transparent;
+    border: none;
+    line-height: 3.5;
+    cursor: pointer;
+}
+.sldr_line_map {
+    bottom: 15px;
+    background: #eaeaea;
+    width: 75px;
+    height: 8px;
+    position: relative;
+    z-index: -1;
+}
+.year_dot_map {
+    font-weight: 500;
+}
+.year_dot_map2 {
+  position: absolute;
+    font-weight: 500;
+    left: 80%;
+}
+
+.both_ply_pause_map .button:focus {
+    outline: none;
+}
+.smap div:focus{
+    outline: none;
+}
+@media (max-width: 767px){
+    .ply_pause_btn_map {
+        float: left;
+        margin-left: -33px;
+    }
     .container-fluid {
         padding: 83px 7px 83px 7px !important; /* 2/1/2019 gs*/
     }
@@ -469,6 +600,10 @@ header.header-logo {
     .fsingle_line { /* 2/1/2019 gs*/
         display: none;
     }
+
+    .three-sec{
+      justify-content: center;
+    }
     .top-three { /* 2/1/2019 gs*/
         display: none !important;
     }
@@ -480,6 +615,7 @@ header.header-logo {
     }
     .feedback_full { /* 2/1/2019 gs*/
         display: none !important;
+        justify-content: center;
     }
     .top-footer-contain { /* 2/1/2019 gs*/
         padding-bottom: 37px !important;
@@ -496,9 +632,14 @@ header.header-logo {
     .info-txt { /* 2/1/2019 gs*/
         width: 46%;
     }
+
+    .two-set{
+      justify-content: center;
+    }
     .bottom_two { /* 2/1/2019 gs*/
         padding-left: 0 !important;
         padding-right: 0 !important;
+        justify-content: center;
     }
     .update_prt { /* 2/1/2019 gs*/
         right: auto;
@@ -542,10 +683,10 @@ header.header-logo {
         letter-spacing: -0.2px;
         color: #000000;
     }
-    .carousel_custom1 img {
+    /* .carousel_custom1 img {
         float: left;
         width: 30%;
-    }
+    } */
     .carousel_custom1 span.merchant {
         float: right;
         width: 65%;
@@ -630,6 +771,8 @@ header.header-logo {
     }
     .carousel_custom2 {
         text-align: center;
+        position: absolute;
+        margin-left: 500!important;
     }
     .select_sprt {
         padding-right: 0;
@@ -637,6 +780,8 @@ header.header-logo {
     .ncarousel-fluid {
         margin-top: 0;
     }
+
+
 
 
 }
@@ -687,5 +832,38 @@ header.header-logo {
         margin-top: 0;
     }
 }
+.mapael .zoomButton {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    width: 15px;
+    height: 15px;
+    line-height: 10px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    font-weight: bold;
 
+    -webkit-user-select: none;
+    -khtml-user-select : none;
+    -moz-user-select: none;
+    -o-user-select : none;
+    user-select: none;
+}
 
+/* Reset Zoom button first */
+.mapael .zoomReset {
+    top: 10px;
+}
+
+/* Then Zoom In button */
+.mapael .zoomIn {
+    top: 30px;
+}
+
+/* Then Zoom Out button */
+.mapael .zoomOut {
+    top: 50px;
+}

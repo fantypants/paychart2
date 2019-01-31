@@ -36,7 +36,7 @@ class Home extends Component {
 	constructor(props) {
         super(props);
 		this.play = this.play.bind(this);
-		this.timesetting = 5000;
+		this.timesetting = 15000;
 		this.mapTime = 5000;
 		this.countryTimeout = 6000;
 		this.padTime = 1000;
@@ -619,7 +619,7 @@ class Home extends Component {
 										<div className="row">
 											<div className="col-sm-12 full_watch">
 												<div className="watch_text">
-													Watch how Merchants on <span className="paypal_text">Paypal</span> survive and thrive compared to offline merchants.
+													Watch how Merchants on <span className="paypal_text2">Paypal</span> survive and thrive compared to offline merchants.
 												</div>
 											</div>
 											<div className="blue-border"></div>

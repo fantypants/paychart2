@@ -50,23 +50,24 @@ class Footer extends Component {
 							<div className="bottom-text-full">
 								<div className="love_txt">We’d love your feedback!</div>
 							</div>
+
 						</div>
 						<div className="row feed_other">
-							<div className="col-xs-12 col-sm-12 col-md-6 bottom_one">
-								<div className="three_sec">
-									<div className="two-set">
-										<div className="iuv_info">
-											<div className="iuv-txt">Ivy Lau:</div><div className="info-txt">info@paypal.com</div>
-										</div>
-										<div className="iuv_info">
-											<div className="iuv-txt">Usman Ahmed:</div><div className="info-txt">info@paypal.com</div>
-										</div>
-										<div className="iuv_info">
-											<div className="iuv-txt">Paul Disselkoen:</div><div className="info-txt">info@paypal.com</div>
-										</div>
-									</div>
-								</div>
-							</div>
+              <div className="bottom_one">
+                <div className="three_sec">
+                  <div className="two-set">
+                    <div className="iuv_info">
+                      <div className="iuv-txt">Ivy Lau:</div><div className="info-txt">info@paypal.com</div>
+                    </div>
+                    <div className="iuv_info">
+                      <div className="iuv-txt">Usman Ahmed:</div><div className="info-txt">info@paypal.com</div>
+                    </div>
+                    <div className="iuv_info">
+                      <div className="iuv-txt">Paul Disselkoen:</div><div className="info-txt">info@paypal.com</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 							<div className="col-xs-12 col-sm-12 col-md-6 bottom_two">
 								<div className="right_reserve">
 									<div className="update_prt">2018 All Rights Reserved. Made with <span className="hert">♥</span> by <span className="nimblet">nimblebot.com</span></div>

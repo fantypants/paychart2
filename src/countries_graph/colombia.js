@@ -122,151 +122,153 @@ class Colombia extends React.Component {
         this.slider.slickPause();
       }
 
-    // responsive mobile Start
-    componentWillMount() {
-      window.addEventListener('resize', this.handleWindowSizeChange);
-    }
+      // responsive mobile Start
+        componentWillMount() {
+          window.addEventListener('resize', this.handleWindowSizeChange);
+        }
 
-    // make sure to remove the listener
-    // when the component is not mounted anymore
-    componentWillUnmount() {
-      window.removeEventListener('resize', this.handleWindowSizeChange);
-    }
+        // make sure to remove the listener
+        // when the component is not mounted anymore
+        componentWillUnmount() {
+          window.removeEventListener('resize', this.handleWindowSizeChange);
+        }
 
-    handleWindowSizeChange = () => {
-      this.setState({ width: window.innerWidth });
-    };
-
-    animation(data, datasetPosition) {
-      if(playChart !== false){
-      const oldState = this.state.chartData;
-      let datasets = oldState.datasets;
-      datasets[datasetPosition] = data;
-      const newState = Object.assign({}, oldState, {
-        datasets: datasets
-      })
-
-      this.setState({
-        chartData: newState
-      })
-
-
-      switch(year) {
-        case 0:
-        yearStyle = {
-          left: 18,
-          top: 25,
-          position: 'relative',
-          width: '40px',
-          borderRadius: 50,
-          borderRadiusInputTopLeft: 10,
-          borderRadiusInputTopRight: 10,
-          borderRadiusInputBottomLeft: 10,
-          borderRadiusInputBottomRight: 10,
-          height: '40px',
-          backgroundColor: `rgba(0,0,255,0.5)`,
-          borderColor: `blue`
+        handleWindowSizeChange = () => {
+          this.setState({ width: window.innerWidth });
         };
-        break;
-        case 1:
-        yearStyle = {
-          left: 92,
-          top: 25,
-          position: 'relative',
-          width: '40px',
-          borderRadius:50,
-          borderRadiusInputTopLeft:10,
-          borderRadiusInputTopRight:10,
-          borderRadiusInputBottomLeft:10,
-          borderRadiusInputBottomRight:10,
-          height: '40px',
-          backgroundColor: `rgba(0,0,255,0.5)`,
-          borderColor: `blue`
-        };
-        break;
-        case 2:
-        yearStyle = {
-          left: 158,
-          top: 25,
-          position: 'relative',
-          width: '40px',
-          borderRadius:50,
-          borderRadiusInputTopLeft:10,
-          borderRadiusInputTopRight:10,
-          borderRadiusInputBottomLeft:10,
-          borderRadiusInputBottomRight:10,
-          height: '40px',
-          backgroundColor: `rgba(0,0,255,0.5)`,
-          borderColor: `blue`
-        };
-        break;
-        case 3:
-        yearStyle = {
-          left: 242,
-          top: 25,
-          position: 'relative',
-          width: '40px',
-          borderRadius:50,
-          borderRadiusInputTopLeft:10,
-          borderRadiusInputTopRight:10,
-          borderRadiusInputBottomLeft:10,
-          borderRadiusInputBottomRight:10,
-          height: '40px',
-          backgroundColor: `rgba(0,0,255,0.5)`,
-          borderColor: `blue`
-        };
-        break;
-        case 4:
-        yearStyle = {
-          left: 242,
-          top: 25,
-          position: 'relative',
-          width: '40px',
-          borderRadius:50,
-          borderRadiusInputTopLeft:10,
-          borderRadiusInputTopRight:10,
-          borderRadiusInputBottomLeft:10,
-          borderRadiusInputBottomRight:10,
-          height: '40px',
-          backgroundColor: `rgba(0,0,255,0.5)`,
-          borderColor: `blue`
-        };
-      };
 
-      year = 1 + datasetPosition;
+        animation(data, datasetPosition) {
+          if(playChart !== false){
+          const oldState = this.state.chartData;
+          let datasets = oldState.datasets;
+          datasets[datasetPosition] = data;
+          const newState = Object.assign({}, oldState, {
+            datasets: datasets
+          })
 
-      // let newData = this.state.chartData.data.labels.push();
-      //
-      // newData.chartData.data.datasets.forEach((dataset) => {
-      //     dataset.data.push(data);
-      // });
-      //
-      // this.setState({chartData: this.state.data}, () =>{
-      //   // called when state applied
-      //   setTimeout
-      // })
-      statePosition = datasetPosition;
-    }};
+          this.setState({
+            chartData: newState
+          })
 
-    saveState() {
-      playChart = false;
-    }
 
-    updateColumn(data, datasetPosition) {
-      if(playChart !== false){
-      const oldState = this.state.chartData;
+          switch(year) {
+            case 0:
+            yearStyle = {
+              left: 18,
+              top: 25,
+              position: 'relative',
+              width: '40px',
+              borderRadius: 50,
+              borderRadiusInputTopLeft: 10,
+              borderRadiusInputTopRight: 10,
+              borderRadiusInputBottomLeft: 10,
+              borderRadiusInputBottomRight: 10,
+              height: '40px',
+              backgroundColor: `rgba(0,0,255,0.5)`,
+              borderColor: `blue`
+            };
+            break;
+            case 1:
+            yearStyle = {
+              left: 92,
+              top: 25,
+              position: 'relative',
+              width: '40px',
+              borderRadius:50,
+              borderRadiusInputTopLeft:10,
+              borderRadiusInputTopRight:10,
+              borderRadiusInputBottomLeft:10,
+              borderRadiusInputBottomRight:10,
+              height: '40px',
+              backgroundColor: `rgba(0,0,255,0.5)`,
+              borderColor: `blue`
+            };
+            break;
+            case 2:
+            yearStyle = {
+              left: 158,
+              top: 25,
+              position: 'relative',
+              width: '40px',
+              borderRadius:50,
+              borderRadiusInputTopLeft:10,
+              borderRadiusInputTopRight:10,
+              borderRadiusInputBottomLeft:10,
+              borderRadiusInputBottomRight:10,
+              height: '40px',
+              backgroundColor: `rgba(0,0,255,0.5)`,
+              borderColor: `blue`
+            };
+            break;
+            case 3:
+            yearStyle = {
+              left: 242,
+              top: 25,
+              position: 'relative',
+              width: '40px',
+              borderRadius:50,
+              borderRadiusInputTopLeft:10,
+              borderRadiusInputTopRight:10,
+              borderRadiusInputBottomLeft:10,
+              borderRadiusInputBottomRight:10,
+              height: '40px',
+              backgroundColor: `rgba(0,0,255,0.5)`,
+              borderColor: `blue`
+            };
+            break;
+            case 4:
+            yearStyle = {
+              left: 242,
+              top: 25,
+              position: 'relative',
+              width: '40px',
+              borderRadius:50,
+              borderRadiusInputTopLeft:10,
+              borderRadiusInputTopRight:10,
+              borderRadiusInputBottomLeft:10,
+              borderRadiusInputBottomRight:10,
+              height: '40px',
+              backgroundColor: `rgba(0,0,255,0.5)`,
+              borderColor: `blue`
+            };
+          };
 
-      let datasets = oldState.datasets;
-      datasets[datasetPosition] = data;
-      const newState = Object.assign({}, oldState, {
-        datasets: datasets
-      })
+          year = 1 + datasetPosition;
 
-      this.setState({
-        chartData: newState
-      })
-    }
-    }
+          // let newData = this.state.chartData.data.labels.push();
+          //
+          // newData.chartData.data.datasets.forEach((dataset) => {
+          //     dataset.data.push(data);
+          // });
+          //
+          // this.setState({chartData: this.state.data}, () =>{
+          //   // called when state applied
+          //   setTimeout
+          // })
+          statePosition = datasetPosition;
+        }};
+
+        saveState() {
+          playChart = false;
+        }
+
+        updateColumn(data, datasetPosition) {
+          if(playChart !== false){
+          const oldState = this.state.chartData;
+
+          let datasets = oldState.datasets;
+          datasets[datasetPosition] = data;
+          const newState = Object.assign({}, oldState, {
+            datasets: datasets
+          })
+
+          this.setState({
+            chartData: newState
+          })
+        }
+        }
+
+
 
     componentDidMount() {
     setTimeout(() => this.animation({

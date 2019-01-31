@@ -103,7 +103,7 @@ const sngl_bar = value => {
    return 'rgb(68, 114, 196)';
 };
 
-class India extends React.Component {
+class India extends Component {
     constructor(props) {
         super(props);
         this.play = this.play.bind(this);
@@ -129,20 +129,22 @@ class India extends React.Component {
         playChart = false;
         this.slider.slickPause();
       }
-    // responsive mobile Start
-    componentWillMount() {
-      window.addEventListener('resize', this.handleWindowSizeChange);
-    }
 
-    // make sure to remove the listener
-    // when the component is not mounted anymore
-    componentWillUnmount() {
-      window.removeEventListener('resize', this.handleWindowSizeChange);
-    }
+      // responsive mobile Start
+        componentWillMount() {
+          window.addEventListener('resize', this.handleWindowSizeChange);
+        }
 
-    handleWindowSizeChange = () => {
-      this.setState({ width: window.innerWidth });
-    };
+        // make sure to remove the listener
+        // when the component is not mounted anymore
+        componentWillUnmount() {
+          window.removeEventListener('resize', this.handleWindowSizeChange);
+        }
+
+        handleWindowSizeChange = () => {
+          this.setState({ width: window.innerWidth });
+        };
+
 
     animation(data, datasetPosition) {
       const oldState = this.state.chartData;

@@ -1,32 +1,3 @@
-@font-face {
-   font-family: 'PayPal Sans Big Medium';
-   font-style: normal;
-   font-weight: 500;
-   src: url('/fonts/PayPalSansBig-Medium.otf') format('opentype');
-}
-@font-face {
-   font-family: 'PayPal Sans Big Thin';
-   font-style: normal;
-   font-weight: normal;
-   src: url('/fonts/PayPalSansBig-Thin.otf') format('opentype');
-
-}
-@font-face {
-   font-family: 'PayPal Sans Big Light';
-   font-style: normal;
-   font-weight: 300;
-   src: url('/fonts/PayPalSansBig-App-Light.ttf') format('truetype'),
-        url('/fonts/PayPalSansBig-App-LightItalic.ttf') format('truetype');
-}
-@font-face {
-   font-family: 'PayPal Sans Big';
-   font-style: normal;
-   font-weight: normal;
-   src: url('/fonts/PayPalSansBig-App-Regular.ttf') format('truetype'),
-        url('/fonts/PayPalSansBig-App-RegularItalic.ttf') format('truetype');
-
-}
-
 .year-wrap {
   font-size: 14;
 }
@@ -63,6 +34,34 @@
   padding-top: 550px;
 }
 
+@font-face {
+   font-family: 'PayPal Sans Big Medium';
+   font-style: normal;
+   font-weight: 500;
+   src: url('/fonts/PayPalSansBig-Medium.otf') format('opentype');
+}
+@font-face {
+   font-family: 'PayPal Sans Big Thin';
+   font-style: normal;
+   font-weight: normal;
+   src: url('/fonts/PayPalSansBig-Thin.otf') format('opentype');
+
+}
+@font-face {
+   font-family: 'PayPal Sans Big Light';
+   font-style: normal;
+   font-weight: 300;
+   src: url('/fonts/PayPalSansBig-App-Light.ttf') format('truetype'),
+        url('/fonts/PayPalSansBig-App-LightItalic.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'PayPal Sans Big';
+   font-style: normal;
+   font-weight: normal;
+   src: url('/fonts/PayPalSansBig-App-Regular.ttf') format('truetype'),
+        url('/fonts/PayPalSansBig-App-RegularItalic.ttf') format('truetype');
+
+}
 .row{
     margin:auto !important;
     padding-left: 15px;  /* 2/1/2019 gs*/
@@ -72,9 +71,12 @@
     padding: 80px 80px 30px 80px !important; /* 2/1/2019 gs*/
 }
 .feedback_full { /* 2/1/2019 gs*/
+  justify-content: center;
     padding-bottom: 40px;
 }
 .feed_other { /* 2/1/2019 gs*/
+  justify-content: center;
+  padding-left: 400px;
     padding-top: 37px;
 }
 .right_reserve { /* 2/1/2019 gs*/
@@ -95,12 +97,14 @@
 }
 .bottom_one { /* 2/1/2019 gs*/
     padding-left: 0 !important;
+    justify-content: center;
 }
 .iuv_info { /* 2/1/2019 gs*/
     width: 100%;
     display: inline-flex;
     vertical-align: middle;
     padding-bottom: 14px;
+    justify-content: center;
 }
 .iuv-txt { /* 2/1/2019 gs*/
     font-family: PayPal Sans Big Medium;
@@ -111,6 +115,7 @@
     vertical-align: middle;
     float: left;
     padding-top: 8px;
+    justify-content: center;
 }
 .info-txt { /* 2/1/2019 gs*/
     font-family: PayPal Sans Big Light;
@@ -119,6 +124,7 @@
     color: #ffffff;
     float: right;
     width: 70%;
+    justify-content: center;
 }
 .mobile-bottom { /* 2/1/2019 gs*/
     width: 100%;
@@ -144,11 +150,14 @@
     color: #000;
 }
 .papl-logo {
-    border-right: 5px solid #d8d8d8;
+    /* border-right: 5px solid #d8d8d8; */
     padding-right: 45px;
 }
 .word-logo {
     padding-left: 41px;
+}
+.logo img {
+  height:90%
 }
 img {
     max-width: calc(100% - (0 * 30px));
@@ -160,9 +169,17 @@ img {
     font-family: PayPal Sans Big Light;
 }
 .paypal_text {
-    color: #0064c7;
+    color: #000000;
     font-family: PayPal Sans Big Medium;
 }
+
+.paypal_text2{
+  font-size: 44px;
+  color: #000000;
+  font-family: PayPal Sans Big Light;
+}
+
+
 .button_sec {
     margin-top: 68px;
 }
@@ -214,6 +231,7 @@ img {
 }
 .footer_bottom { /* 2/1/2019 gs*/
     background-color: #0064c7;
+    justify-content: center;
 }
 .love_txt { /* 2/1/2019 gs*/
     font-family: PayPal Sans Big Light;
@@ -582,6 +600,10 @@ header.header-logo {
     .fsingle_line { /* 2/1/2019 gs*/
         display: none;
     }
+
+    .three-sec{
+      justify-content: center;
+    }
     .top-three { /* 2/1/2019 gs*/
         display: none !important;
     }
@@ -593,6 +615,7 @@ header.header-logo {
     }
     .feedback_full { /* 2/1/2019 gs*/
         display: none !important;
+        justify-content: center;
     }
     .top-footer-contain { /* 2/1/2019 gs*/
         padding-bottom: 37px !important;
@@ -609,9 +632,14 @@ header.header-logo {
     .info-txt { /* 2/1/2019 gs*/
         width: 46%;
     }
+
+    .two-set{
+      justify-content: center;
+    }
     .bottom_two { /* 2/1/2019 gs*/
         padding-left: 0 !important;
         padding-right: 0 !important;
+        justify-content: center;
     }
     .update_prt { /* 2/1/2019 gs*/
         right: auto;
