@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 class Footer extends Component {
-    
+
     render(){
-       
+
         return(
 			<div className="footer-sec">
 				<section id="top_footer_section" className="footer_top">
@@ -76,9 +76,9 @@ class Footer extends Component {
 					</div>
 				</section>
 			</div>
-			
+
         );
-            
+
     }
-} 
+}
 export default Footer;

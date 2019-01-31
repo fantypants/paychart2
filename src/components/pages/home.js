@@ -9,48 +9,595 @@ import Vietnam from'../../countries_graph/Vietnam';
 import { Footer, Header } from '../common';
 import Slider from "react-slick";
 
+let mapPlay = false;
+let indexTest = 0;
+let currentIndex = 0;
+let index = 0;
+let saveIndex = 0;
+let canPlay = true;
+let yearStyle = {
+	left: -12,
+	top: 25,
+	position: 'relative',
+	width: '40px',
+	borderRadius: 50,
+	borderRadiusInputTopLeft: 10,
+	borderRadiusInputTopRight: 10,
+	borderRadiusInputBottomLeft: 10,
+	borderRadiusInputBottomRight: 10,
+	height: '40px',
+	backgroundColor: `rgba(0,0,255,0.5)`,
+	borderColor: `blue`
+};
+let year = 0;
+let countryIndex = 0;
+
 class Home extends Component {
 	constructor(props) {
         super(props);
 		this.play = this.play.bind(this);
-        this.pause = this.pause.bind(this);
-		this.state = {div: <Argentina />};
+		this.timesetting = 5000;
+		this.mapTime = 5000;
+		this.countryTimeout = 6000;
+		this.padTime = 1000;
+    this.pause = this.pause.bind(this);
+		this.state = {div: <Argentina handlePress={this.testPlay} handleReset={this.reset} />};
+		this.index = 0;
+		this.runCharts = this.runCharts.bind(this);
+		this.alterStyle = this.alterStyle.bind(this);
+		this.executeMapYear = this.executeMapYear.bind(this);
+		this.changeCountry = this.changeCountry.bind(this);
 		this.handleChange = this.handleChange.bind(this);
+
 	}
+
+
 	play() {
+				console.log("play clicked");
+				mapPlay =  true;
+				setTimeout(this.changeCountry, 1000);
         this.slider.slickPlay();
       }
-      pause() {
-        this.slider.slickPause();
-      }
+
+
+
+  pause() {
+		console.log("pause clicked");
+			mapPlay =  false;
+    this.slider.slickPause();
+  }
+
+	reset(){
+		canPlay = false;
+	}
+
 	handleChange = event => {
 	if(event.target.value === "Argentina")
 	{
-		this.setState({ div: <Argentina />});
+		this.setState({ div: <Argentina handlePress={this.testPlay} handleReset={this.reset} />});
 
 	}
 	else if(event.target.value === "Colombia")
 	{
 
-		this.setState({ div: <Colombia /> });
+		this.setState({ div: <Colombia handlePress={this.testPlay} handleReset={this.reset}  /> });
 	}
 	else if(event.target.value === "India")
 	{
-         this.setState({ div: <India /> });
+         this.setState({ div: <India handlePress={this.testPlay} handleReset={this.reset} /> });
 	}
 	else if(event.target.value === "Kenya")
 	{
-         this.setState({ div: <Kenya /> });
+         this.setState({ div: <Kenya handlePress={this.testPlay} handleReset={this.reset} /> });
 	}
 	else if(event.target.value === "South Africa")
 	{
-         this.setState({ div: <South_Africa /> });
+         this.setState({ div: <South_Africa handlePress={this.testPlay} handleReset={this.reset} /> });
 	}
 	else
 	{
-        this.setState({ div: <Vietnam /> });
+        this.setState({ div: <Vietnam handlePress={this.testPlay} handleReset={this.reset} /> });
 	}
   };
+
+
+	runCharts() {
+		indexTest = saveIndex;
+		index = indexTest;
+
+		switch(index){
+			case 0:
+			if(canPlay == true){
+				document.getElementById('countries').selectedIndex = 1;
+				this.setState({div: <Argentina handlePress={this.testPlay} handleReset={this.reset} />});
+				indexTest = index + 1;
+				saveIndex = indexTest;
+				break;
+			}
+
+			case 1:
+			if(canPlay == true){
+				this.setState({div: <Colombia handlePress={this.testPlay} handleReset={this.reset} />});
+				document.getElementById('countries').selectedIndex = 2;
+				indexTest = index + 1;
+				saveIndex = indexTest;
+				break;
+			}
+
+			case 2:
+			if(canPlay == true){
+				this.setState({div: <India handlePress={this.testPlay} handleReset={this.reset} />});
+				document.getElementById('countries').selectedIndex = 3;
+				indexTest = index + 1;
+				saveIndex = indexTest;
+				break;
+			}
+
+			case 3:
+			if(canPlay == true){
+				this.setState({div: <Kenya handlePress={this.testPlay} handleReset={this.reset} />});
+				document.getElementById('countries').selectedIndex = 4;
+				indexTest = index + 1;
+				saveIndex = indexTest;
+				break;
+			}
+
+			case 4:
+			if(canPlay == true){
+				this.setState({div: <South_Africa handlePress={this.testPlay} handleReset={this.reset} />});
+				document.getElementById('countries').selectedIndex = 5;
+				indexTest = index + 1;
+				saveIndex = indexTest;
+				break;
+			}
+
+			case 5:
+			if(canPlay == true){
+				this.setState({div: <Vietnam handlePress={this.testPlay} handleReset={this.reset} />});
+				document.getElementById('countries').selectedIndex = 6;
+				indexTest = 0;
+				saveIndex = indexTest;
+				index = 0;
+				break;
+			}
+		}
+			setTimeout(this.runCharts, this.timesetting);
+		};
+
+		testPlay() {
+			canPlay = true;
+		}
+
+		alterStyle(left) {
+			yearStyle = {
+				left: left,
+				top: 25,
+				position: 'relative',
+				width: '40px',
+				borderRadius: 50,
+				borderRadiusInputTopLeft: 10,
+				borderRadiusInputTopRight: 10,
+				borderRadiusInputBottomLeft: 10,
+				borderRadiusInputBottomRight: 10,
+				height: '40px',
+				backgroundColor: `rgba(0,0,255,0.5)`,
+				borderColor: `blue`
+			};
+		}
+
+
+		executeMapYear() {
+
+			switch(year) {
+	      case 0:
+				if(mapPlay == true){
+				year = year + 1;
+				this.alterStyle(-12);
+				currentIndex = 0;
+	      break;
+				}
+
+	      case 1:
+				if(mapPlay == true){
+				year = year + 1;
+				this.alterStyle(62);
+				currentIndex = 1;
+	      break;
+				}
+
+	      case 2:
+				if(mapPlay == true){
+				year = year + 1;
+				this.alterStyle(138);
+				currentIndex = 2;
+	      break;
+				}
+
+	      case 3:
+				if(mapPlay == true){
+				year = year + 1;
+				this.alterStyle(212);
+				currentIndex = 3;
+	      break;
+				}
+
+	      case 4:
+				if(mapPlay == true){
+				year = 0;
+				this.alterStyle(286);
+				currentIndex = 4;
+			}
+	    }
+			if(mapPlay == true){
+				if(year !== 4){
+					setTimeout(this.executeMapYear, this.padTime);
+				}
+			this.slider.slickGoTo(currentIndex)
+				}
+		}
+
+
+		changeCountry() {
+
+			switch(countryIndex){
+				case 0:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 0;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 1:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 1;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 2:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 2;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 3:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 3;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 4:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 4;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 5:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 5;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 6:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 6;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 7:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 7;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 8:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 8;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 9:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 9;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 10:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 10;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 11:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 11;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 12:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 12;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 13:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 13;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 14:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 14;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 15:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 15;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 16:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 16;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 17:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 17;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 18:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 18;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 19:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 19;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 20:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 20;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 21:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 21;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 22:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 22;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 23:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 23;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 24:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 24;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 25:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 25;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 26:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 26;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 27:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 27;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 28:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 28;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+				}
+
+				case 29:
+				if(mapPlay == true){
+				year = 0;
+				currentIndex = 0;
+				document.getElementById('countryChange').selectedIndex = 29;
+				setTimeout(this.executeMapYear, this.mapTime);
+				countryIndex = countryIndex + 1;
+				setTimeout(this.changeCountry, this.countryTimeout);
+				break;
+			}}
+			year = 0;
+			yearStyle = {
+				left: -12,
+				top: 25,
+				position: 'relative',
+				width: '40px',
+				borderRadius: 50,
+				borderRadiusInputTopLeft: 10,
+				borderRadiusInputTopRight: 10,
+				borderRadiusInputBottomLeft: 10,
+				borderRadiusInputBottomRight: 10,
+				height: '40px',
+				backgroundColor: `rgba(0,0,255,0.5)`,
+				borderColor: `blue`
+			};
+		}
+
+
+	componentDidMount(){
+		index = 0;
+		saveIndex = 0;
+		setTimeout(this.runCharts, 1000);
+		//setTimeout(this.executeMapYear, 5000);
+		//setTimeout(this.changeCountry, 1000);
+	};
+
+
+
+
 
   		render(){
 			const settings = {
@@ -60,8 +607,8 @@ class Home extends Component {
 				slidesToScroll: 1,
         accessibility:true,
         autoplay: false,
-        arrrows:true
-				// autoplaySpeed: 5000
+        arrrows:true,
+				//autoplaySpeed: 5000
 			};
 			  	return(
                 <div className="page-sec">
@@ -75,7 +622,7 @@ class Home extends Component {
 													Watch how Merchants on <span className="paypal_text">Paypal</span> survive and thrive compared to offline merchants.
 												</div>
 											</div>
-											<div class="blue-border"></div>
+											<div className="blue-border"></div>
 											<div className="col-sm-12 button_sec">
 												<div className="papal_buttn"><a href="">Download the full report</a></div>
 											</div>
@@ -97,7 +644,7 @@ class Home extends Component {
 											<div className="col-xs-12 col-sm-12 col-md-6 select_prt">
 												<div class="select_option">
 													<span class="fancyArrow"></span>
-													<select className="graph_cntry_slct" onChange={this.handleChange}>
+													<select id="countries" className="graph_cntry_slct" onChange={this.handleChange}>
 														<option value="volvo" selected>Select a country</option>
 														<option value="Argentina">Argentina</option>
 														<option value="Colombia">Colombia</option>
@@ -155,7 +702,7 @@ class Home extends Component {
 								</section>
 								<section id="third_sec" className="sec_third">
 									<div className="row bargraph">
-										<div className="col-md-6 cont_textprt">
+										<div className="col-md-3 cont_textprt">
 											<div className="container-fluid tcustum-fluid">
 												<div className="row">
 													<div className="cntbr_txt">
@@ -177,11 +724,11 @@ class Home extends Component {
 												</div>
 											</div>
 										</div>
-										<div className="col-md-6 map_prt">
+										<div className="col-md-9 map_prt">
 											<div className="select_sprt">
 												<div className="select_option">
 													<span className="fancyArrow"></span>
-													<select className="cntry_slct">
+													<select id="countryChange" className="cntry_slct">
 													<option value="usa_states">USA</option>
 													<option value="india_states">India</option>
 													<option value="belgium_states">Belgium</option>
@@ -209,32 +756,45 @@ class Home extends Component {
 													<option value="portugal_states">Portugal</option>
 													<option value="romania_states">Romania</option>
 													<option value="slovakia_states">Slovakia</option>
-													<option value="slovenia_states">Slovenia</option>
 													<option value="finland_states">Finland</option>
 													<option value="sweden_states">Sweden</option>
 													<option value="canada_states">Canada</option>
 													</select>
 												</div>
 											</div>
+											<div class="year-wrap">
+											<div class="test0">2013</div>
+											<div class="test1">2014</div>
+											<div class="test2">2015</div>
+											<div class="test3">2016</div>
+											<div class="test4">2017</div>
+											</div>
 											<div class="smap">
+
 												<Slider ref={slider => (this.slider = slider)} {...settings}>
+
 													<div className="mapcontainer">
+
 														<div className="map">
 														</div>
 													</div>
 													<div className="mapcontainer">
+														<div className="year_dot_map2">2017</div>
 														<div className="map">
 														</div>
 													</div>
 													<div className="mapcontainer">
+														<div className="year_dot_map2">2017</div>
 														<div className="map">
 														</div>
 													</div>
 													<div className="mapcontainer">
+														<div className="year_dot_map2">2017</div>
 														<div className="map">
 														</div>
 													</div>
 													<div className="mapcontainer">
+														<div className="year_dot_map2">2017</div>
 														<div className="map">
 														</div>
 													</div>
@@ -258,9 +818,12 @@ class Home extends Component {
 														</div>
 														<span className="merchant">In 2016, merchants on Paypal in Argentina grew by X%, greater than 8x over [other index]</span>
 													</div>
+
 													<div className="carousel_custom2">
 														{/* <img src="image/carousel_itm.png" /> */}
 														<div className="slider_whole_dot_map">
+															<div id="mapYear" className="timeline" style={yearStyle}>
+			                        </div>
 															<a className="button frst_sld"  onClick={e => this.slider.slickGoTo(0)}>
 															<div className="sldr_dot"></div>
 															<div class="sldr_line_map"></div>

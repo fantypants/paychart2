@@ -97,7 +97,7 @@ $(function () {
                             , tooltip: {content: "Roma - Miami"}
                         }
                         , 'us_BR': {
-                            factor: 0.2
+                            factor: 0.4
                             , between: ['US', 'BR']
                             , attrs: {
                                 "stroke-width": 4

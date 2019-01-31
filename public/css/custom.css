@@ -25,7 +25,44 @@
    src: url('/fonts/PayPalSansBig-App-Regular.ttf') format('truetype'),
         url('/fonts/PayPalSansBig-App-RegularItalic.ttf') format('truetype');
 
-} 
+}
+
+.year-wrap {
+  font-size: 14;
+}
+
+.test0{
+  position: absolute;
+  font-size: 12px;
+  padding-left: 610px;
+  padding-top: 550px;
+}
+.test1{
+  position: absolute;
+  font-size: 12px;
+  padding-left: 642px;
+  padding-top: 550px;
+}
+.test2{
+  position: absolute;
+  font-size: 12px;
+  padding-left: 673px;
+  padding-top: 550px;
+}
+.test3{
+  position: absolute;
+  font-size: 12px;
+  padding-left: 705px;
+  padding-top: 550px;
+}
+
+.test4{
+  position: absolute;
+  font-size: 12px;
+  padding-left: 740px;
+  padding-top: 550px;
+}
+
 .row{
     margin:auto !important;
     padding-left: 15px;  /* 2/1/2019 gs*/
@@ -489,6 +526,12 @@ header.header-logo {
 .year_dot_map {
     font-weight: 500;
 }
+.year_dot_map2 {
+  position: absolute;
+    font-weight: 500;
+    left: 80%;
+}
+
 .both_ply_pause_map .button:focus {
     outline: none;
 }
@@ -700,6 +743,8 @@ header.header-logo {
     }
     .carousel_custom2 {
         text-align: center;
+        position: absolute;
+        margin-left: 500!important;
     }
     .select_sprt {
         padding-right: 0;
@@ -707,6 +752,8 @@ header.header-logo {
     .ncarousel-fluid {
         margin-top: 0;
     }
+
+
 
 
 }
@@ -792,4 +839,3 @@ header.header-logo {
 .mapael .zoomOut {
     top: 50px;
 }
-
