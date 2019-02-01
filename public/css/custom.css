@@ -1,5 +1,6 @@
 .year-wrap {
   font-size: 14;
+
 }
 
 .test0{
@@ -387,6 +388,7 @@ header.header-logo {
 }
 .map_prt {
     padding-right: 0;
+    margin-top: 150px;
 }
 .blue-border {
     border: 5px solid #009cec;

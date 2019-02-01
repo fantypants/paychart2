@@ -449,6 +449,7 @@ class Argentina extends Component {
       backgroundColor: '#4472c4',
       borderColor: '#4472c4',
       borderWidth: 1,
+      //Put here
       hoverBackgroundColor: '#4472c4',
       hoverBorderColor: '#4472c4',
       // data: [6.2, 14.9, 32.8, 36.9],
@@ -762,7 +763,7 @@ class Argentina extends Component {
                         </div>
                       </div>
 
-              
+
                     </div>
             );
           }
