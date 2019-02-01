@@ -721,28 +721,6 @@ class Kenya extends Component {
                          </button>
                        </div>
                      </div>
-                     <div className="slider_whole_dot">
-                        <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(0)}>
-                          <div className="sldr_dot"></div>
-                          <div class="sldr_line"></div>
-                          <div className="year_dot">2013</div>
-                        </a>
-                        <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(1)}>
-                          <div className="sldr_dot"></div>
-                          <div class="sldr_line"></div>
-                          <div className="year_dot">2014</div>
-                        </a>
-                        <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(2)}>
-                          <div className="sldr_dot"></div>
-                          <div class="sldr_line"></div>
-                          <div className="year_dot">2015</div>
-                        </a>
-                        <a className="button frst_sld"  onClick={e => this.slider.slickGoTo(3)}>
-                          <div className="sldr_dot"></div>
-                          <div class="sldr_line sldr_line_last"></div>
-                          <div className="year_dot">2016</div>
-                        </a>
-                      </div>
                    </div>
            );
           }

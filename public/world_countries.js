@@ -28,12 +28,12 @@
 }(function ($, Mapael) {
 
     "use strict";
-    
+
     $.extend(true, Mapael,
         {
             maps :  {
                 world_countries : {
-                    width : 999.29852,
+                    width : 1200.29852,
                     height : 392.03476,
                     getCoords : function (lat, lon) {
                         var xfactor = 2.775076875916;
@@ -42,7 +42,7 @@
                         var yfactor = -2.8112860731578;
                         var yoffset = 235.89691962022;
                         var y = (lat * yfactor) + yoffset;
-                            
+
                         return {'x' : x, 'y' : y};
                     },
                     'elems': {

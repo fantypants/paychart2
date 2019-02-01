@@ -6,32 +6,32 @@
   position: absolute;
   font-size: 12px;
   padding-left: 610px;
-  padding-top: 550px;
+  padding-top: 470px;
 }
 .test1{
   position: absolute;
   font-size: 12px;
   padding-left: 642px;
-  padding-top: 550px;
+  padding-top: 470px;
 }
 .test2{
   position: absolute;
   font-size: 12px;
   padding-left: 673px;
-  padding-top: 550px;
+  padding-top: 470px;
 }
 .test3{
   position: absolute;
   font-size: 12px;
   padding-left: 705px;
-  padding-top: 550px;
+  padding-top: 470px;
 }
 
 .test4{
   position: absolute;
   font-size: 12px;
   padding-left: 740px;
-  padding-top: 550px;
+  padding-top: 470px;
 }
 
 @font-face {
@@ -452,10 +452,11 @@ header.header-logo {
     width: 80px;
     margin: auto;
     background: #0064c7;
-    height: 39px;
+    height: 36px;
     border-radius: 38px;
     position: relative;
-    right: 136%;
+    top: 10%;
+    right: 125%;
 }
 .both_ply_pause .button:focus {
     outline: none;
@@ -649,7 +650,7 @@ header.header-logo {
         padding-right: 0 !important;
     }
     .both_ply_pause { /* 2/1/2019 gs*/
-        right: 40%;
+        right: 35%;
         top: 132px;
         z-index: 99;
     }

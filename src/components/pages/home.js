@@ -55,7 +55,7 @@ class Home extends Component {
 	play() {
 				console.log("play clicked");
 				mapPlay =  true;
-				setTimeout(this.changeCountry, 1000);
+				setTimeout(this.changeCountry, 1);
         this.slider.slickPlay();
       }
 
@@ -590,7 +590,7 @@ class Home extends Component {
 	componentDidMount(){
 		index = 0;
 		saveIndex = 0;
-		setTimeout(this.runCharts, 1000);
+		setTimeout(this.runCharts, 10);
 		//setTimeout(this.executeMapYear, 5000);
 		//setTimeout(this.changeCountry, 1000);
 	};
@@ -772,29 +772,23 @@ class Home extends Component {
 											<div class="smap">
 
 												<Slider ref={slider => (this.slider = slider)} {...settings}>
-
 													<div className="mapcontainer">
-
 														<div className="map">
 														</div>
 													</div>
 													<div className="mapcontainer">
-														<div className="year_dot_map2">2017</div>
 														<div className="map">
 														</div>
 													</div>
 													<div className="mapcontainer">
-														<div className="year_dot_map2">2017</div>
 														<div className="map">
 														</div>
 													</div>
 													<div className="mapcontainer">
-														<div className="year_dot_map2">2017</div>
 														<div className="map">
 														</div>
 													</div>
 													<div className="mapcontainer">
-														<div className="year_dot_map2">2017</div>
 														<div className="map">
 														</div>
 													</div>
@@ -806,7 +800,7 @@ class Home extends Component {
 												<div className="scarousel_custom">
 													<div className="carousel_custom1">
 														{/* <img src="image/carousel_btn.png" /> */}
-														<div className="ply_pause_btn_map" style={{ textAlign: "center" }}>
+														<div className="ply_pause_btn_map" style={{ textAlign: "center", marginLeft: '70px', marginTop: '-20px' }}>
 															<div className="both_ply_pause_map">
 															<button className="button" onClick={this.play}>
 																<img src="image/play_button.png" />
@@ -822,33 +816,6 @@ class Home extends Component {
 													<div className="carousel_custom2">
 														{/* <img src="image/carousel_itm.png" /> */}
 														<div className="slider_whole_dot_map">
-															<div id="mapYear" className="timeline" style={yearStyle}>
-			                        </div>
-															<a className="button frst_sld"  onClick={e => this.slider.slickGoTo(0)}>
-															<div className="sldr_dot"></div>
-															<div class="sldr_line_map"></div>
-															<div className="year_dot_map">2013</div>
-															</a>
-															<a className="button frst_sld"  onClick={e => this.slider.slickGoTo(1)}>
-															<div className="sldr_dot"></div>
-															<div class="sldr_line_map"></div>
-															<div className="year_dot_map">2014</div>
-															</a>
-															<a className="button frst_sld"  onClick={e => this.slider.slickGoTo(2)}>
-															<div className="sldr_dot"></div>
-															<div class="sldr_line_map"></div>
-															<div className="year_dot_map">2015</div>
-															</a>
-															<a className="button frst_sld"  onClick={e => this.slider.slickGoTo(3)}>
-															<div className="sldr_dot"></div>
-															<div class="sldr_line_map"></div>
-															<div className="year_dot_map">2016</div>
-															</a>
-															<a className="button frst_sld"  onClick={e => this.slider.slickGoTo(4)}>
-															<div className="sldr_dot"></div>
-															<div class="sldr_line_map sldr_line_last"></div>
-															<div className="year_dot_map">2017</div>
-															</a>
 														</div>
 													</div>
 												</div>
