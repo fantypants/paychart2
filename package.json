@@ -1,6 +1,6 @@
 {
   "name": "project_name",
-  "homepage": "https://fantypants.github.io/paychart2/",
+  "homepage": "https://fantypants.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -32,7 +32,7 @@
     "eject": "react-scripts eject",
     "start-prod": "cross-env NODE_ENV=production && forever server.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
